@@ -1,0 +1,342 @@
+[
+  {
+    "id": "bl1",
+    "slug": "elegant-royal-blue-puff-sleeve",
+    "name": "Elegant Royal Blue Puff Sleeve",
+    "category": "Blouses",
+    "subcategory": "Puff Sleeve",
+    "price": 4600,
+    "originalPrice": 5500,
+    "description": "Discover the luxury of this elegant blouse. Handcrafted with premium Pure Silk in a stunning Royal Blue hue. Perfect for your most cherished occasions.",
+    "fabric": "Pure Silk",
+    "images": [
+      "/images/blouse_embroidered_1778910458302.png",
+      "/images/blouse_embroidered_1778910458302.png"
+    ],
+    "colors": [
+      "Royal Blue",
+      "Gold"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "Low Stock",
+    "rating": 4,
+    "reviews": 75,
+    "tags": [
+      "casual"
+    ]
+  },
+  {
+    "id": "bl2",
+    "slug": "royal-ruby-red-designer",
+    "name": "Royal Ruby Red Designer",
+    "category": "Blouses",
+    "subcategory": "Designer",
+    "price": 2800,
+    "originalPrice": 3400,
+    "description": "Discover the luxury of this royal blouse. Handcrafted with premium Raw Silk in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
+    "fabric": "Raw Silk",
+    "images": [
+      "/images/blouse_embroidered_1778910458302.png",
+      "/images/blouse_embroidered_1778910458302.png"
+    ],
+    "colors": [
+      "Ruby Red",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.1,
+    "reviews": 174,
+    "tags": [
+      "festive",
+      "bestseller",
+      "traditional"
+    ]
+  },
+  {
+    "id": "bl3",
+    "slug": "luxurious-gold-designer",
+    "name": "Luxurious Gold Designer",
+    "category": "Blouses",
+    "subcategory": "Designer",
+    "price": 4000,
+    "originalPrice": 4800,
+    "description": "Discover the luxury of this luxurious blouse. Handcrafted with premium Raw Silk in a stunning Gold hue. Perfect for your most cherished occasions.",
+    "fabric": "Raw Silk",
+    "images": [
+      "/images/blouse_embroidered_1778910458302.png",
+      "/images/blouse_embroidered_1778910458302.png"
+    ],
+    "colors": [
+      "Gold",
+      "Grape Soda"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "Low Stock",
+    "rating": 4.3,
+    "reviews": 139,
+    "tags": [
+      "traditional"
+    ]
+  },
+  {
+    "id": "bl4",
+    "slug": "vibrant-grape-soda-designer",
+    "name": "Vibrant Grape Soda Designer",
+    "category": "Blouses",
+    "subcategory": "Designer",
+    "price": 2400,
+    "originalPrice": 2900,
+    "description": "Discover the luxury of this vibrant blouse. Handcrafted with premium Velvet in a stunning Grape Soda hue. Perfect for your most cherished occasions.",
+    "fabric": "Velvet",
+    "images": [
+      "/images/blouse_embroidered_1778910458302.png",
+      "/images/blouse_embroidered_1778910458302.png"
+    ],
+    "colors": [
+      "Grape Soda",
+      "Emerald Green"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.9,
+    "reviews": 192,
+    "tags": [
+      "festive",
+      "casual",
+      "traditional"
+    ]
+  },
+  {
+    "id": "bl5",
+    "slug": "luxurious-rosy-taupe-puff-sleeve",
+    "name": "Luxurious Rosy Taupe Puff Sleeve",
+    "category": "Blouses",
+    "subcategory": "Puff Sleeve",
+    "price": 2500,
+    "originalPrice": 3000,
+    "description": "Discover the luxury of this luxurious blouse. Handcrafted with premium Pure Silk in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
+    "fabric": "Pure Silk",
+    "images": [
+      "/images/blouse_embroidered_1778910458302.png",
+      "/images/blouse_embroidered_1778910458302.png"
+    ],
+    "colors": [
+      "Rosy Taupe",
+      "Ivory"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "Low Stock",
+    "rating": 4.1,
+    "reviews": 50,
+    "tags": [
+      "casual",
+      "festive",
+      "traditional"
+    ]
+  },
+  {
+    "id": "bl6",
+    "slug": "premium-lavender-puff-sleeve",
+    "name": "Premium Lavender Puff Sleeve",
+    "category": "Blouses",
+    "subcategory": "Puff Sleeve",
+    "price": 2600,
+    "originalPrice": 3100,
+    "description": "Discover the luxury of this premium blouse. Handcrafted with premium Brocade in a stunning Lavender hue. Perfect for your most cherished occasions.",
+    "fabric": "Brocade",
+    "images": [
+      "/images/blouse_embroidered_1778910458302.png",
+      "/images/blouse_embroidered_1778910458302.png"
+    ],
+    "colors": [
+      "Lavender",
+      "Emerald Green"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "Low Stock",
+    "rating": 4.5,
+    "reviews": 133,
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "id": "bl7",
+    "slug": "luxurious-blush-pink-puff-sleeve",
+    "name": "Luxurious Blush Pink Puff Sleeve",
+    "category": "Blouses",
+    "subcategory": "Puff Sleeve",
+    "price": 4600,
+    "originalPrice": 5500,
+    "description": "Discover the luxury of this luxurious blouse. Handcrafted with premium Pure Silk in a stunning Blush Pink hue. Perfect for your most cherished occasions.",
+    "fabric": "Pure Silk",
+    "images": [
+      "/images/blouse_embroidered_1778910458302.png",
+      "/images/blouse_embroidered_1778910458302.png"
+    ],
+    "colors": [
+      "Blush Pink",
+      "Lavender"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.1,
+    "reviews": 101,
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "id": "bl8",
+    "slug": "classic-gold-bridal-blouses",
+    "name": "Classic Gold Bridal Blouses",
+    "category": "Blouses",
+    "subcategory": "Bridal Blouses",
+    "price": 3400,
+    "originalPrice": 4100,
+    "description": "Discover the luxury of this classic blouse. Handcrafted with premium Velvet in a stunning Gold hue. Perfect for your most cherished occasions.",
+    "fabric": "Velvet",
+    "images": [
+      "/images/blouse_puff_1778909439615.png",
+      "/images/blouse_puff_1778909439615.png"
+    ],
+    "colors": [
+      "Gold",
+      "Emerald Green"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.1,
+    "reviews": 44,
+    "tags": [
+      "casual",
+      "bestseller"
+    ]
+  },
+  {
+    "id": "bl9",
+    "slug": "vibrant-rosy-taupe-bridal-blouses",
+    "name": "Vibrant Rosy Taupe Bridal Blouses",
+    "category": "Blouses",
+    "subcategory": "Bridal Blouses",
+    "price": 3300,
+    "originalPrice": 4000,
+    "description": "Discover the luxury of this vibrant blouse. Handcrafted with premium Raw Silk in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
+    "fabric": "Raw Silk",
+    "images": [
+      "/images/blouse_puff_1778909439615.png",
+      "/images/blouse_puff_1778909439615.png"
+    ],
+    "colors": [
+      "Rosy Taupe",
+      "Emerald Green"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.8,
+    "reviews": 143,
+    "tags": [
+      "traditional",
+      "casual",
+      "new arrival"
+    ]
+  },
+  {
+    "id": "bl10",
+    "slug": "elegant-ruby-red-bridal-blouses",
+    "name": "Elegant Ruby Red Bridal Blouses",
+    "category": "Blouses",
+    "subcategory": "Bridal Blouses",
+    "price": 3200,
+    "originalPrice": 3800,
+    "description": "Discover the luxury of this elegant blouse. Handcrafted with premium Brocade in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
+    "fabric": "Brocade",
+    "images": [
+      "/images/blouse_puff_1778909439615.png",
+      "/images/blouse_puff_1778909439615.png"
+    ],
+    "colors": [
+      "Ruby Red",
+      "Grape Soda"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 5,
+    "reviews": 27,
+    "tags": [
+      "casual",
+      "trending"
+    ]
+  }
+]

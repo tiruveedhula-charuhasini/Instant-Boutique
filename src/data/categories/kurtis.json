@@ -1,0 +1,344 @@
+[
+  {
+    "id": "ku1",
+    "slug": "vibrant-rosy-taupe-straight-cut",
+    "name": "Vibrant Rosy Taupe Straight Cut",
+    "category": "Kurtis",
+    "subcategory": "Straight Cut",
+    "price": 2300,
+    "originalPrice": 2800,
+    "description": "Discover the luxury of this vibrant kurti. Handcrafted with premium Cotton Silk in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
+    "fabric": "Cotton Silk",
+    "images": [
+      "/images/kurti_image_1778907149733.png",
+      "/images/kurti_image_1778907149733.png"
+    ],
+    "colors": [
+      "Rosy Taupe",
+      "Blush Pink"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "Low Stock",
+    "rating": 5,
+    "reviews": 33,
+    "tags": [
+      "casual",
+      "bestseller"
+    ]
+  },
+  {
+    "id": "ku2",
+    "slug": "modern-emerald-green-anarkali",
+    "name": "Modern Emerald Green Anarkali",
+    "category": "Kurtis",
+    "subcategory": "Anarkali",
+    "price": 1800,
+    "originalPrice": 2200,
+    "description": "Discover the luxury of this modern kurti. Handcrafted with premium Cotton Silk in a stunning Emerald Green hue. Perfect for your most cherished occasions.",
+    "fabric": "Cotton Silk",
+    "images": [
+      "/images/kurti_image_1778907149733.png",
+      "/images/kurti_image_1778907149733.png"
+    ],
+    "colors": [
+      "Emerald Green",
+      "Grape Soda"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.9,
+    "reviews": 207,
+    "tags": [
+      "casual",
+      "premium"
+    ]
+  },
+  {
+    "id": "ku3",
+    "slug": "modern-rosy-taupe-cotton-kurtis",
+    "name": "Modern Rosy Taupe Cotton Kurtis",
+    "category": "Kurtis",
+    "subcategory": "Cotton Kurtis",
+    "price": 3000,
+    "originalPrice": 3600,
+    "description": "Discover the luxury of this modern kurti. Handcrafted with premium Cotton Silk in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
+    "fabric": "Cotton Silk",
+    "images": [
+      "/images/kurti_image_1778907149733.png",
+      "/images/kurti_image_1778907149733.png"
+    ],
+    "colors": [
+      "Rosy Taupe",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.1,
+    "reviews": 69,
+    "tags": [
+      "casual"
+    ]
+  },
+  {
+    "id": "ku4",
+    "slug": "royal-ivory-cotton-kurtis",
+    "name": "Royal Ivory Cotton Kurtis",
+    "category": "Kurtis",
+    "subcategory": "Cotton Kurtis",
+    "price": 3300,
+    "originalPrice": 4000,
+    "description": "Discover the luxury of this royal kurti. Handcrafted with premium Rayon in a stunning Ivory hue. Perfect for your most cherished occasions.",
+    "fabric": "Rayon",
+    "images": [
+      "/images/kurti_party_1778910403804.png",
+      "/images/kurti_party_1778910403804.png"
+    ],
+    "colors": [
+      "Ivory",
+      "Royal Blue"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.8,
+    "reviews": 76,
+    "tags": [
+      "festive",
+      "casual",
+      "bestseller"
+    ]
+  },
+  {
+    "id": "ku5",
+    "slug": "luxurious-blush-pink-anarkali",
+    "name": "Luxurious Blush Pink Anarkali",
+    "category": "Kurtis",
+    "subcategory": "Anarkali",
+    "price": 2000,
+    "originalPrice": 2400,
+    "description": "Discover the luxury of this luxurious kurti. Handcrafted with premium Rayon in a stunning Blush Pink hue. Perfect for your most cherished occasions.",
+    "fabric": "Rayon",
+    "images": [
+      "/images/kurti_image_1778907149733.png",
+      "/images/kurti_image_1778907149733.png"
+    ],
+    "colors": [
+      "Blush Pink",
+      "Grape Soda"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.7,
+    "reviews": 128,
+    "tags": [
+      "trending",
+      "bestseller"
+    ]
+  },
+  {
+    "id": "ku6",
+    "slug": "handcrafted-royal-blue-festive-wear",
+    "name": "Handcrafted Royal Blue Festive Wear",
+    "category": "Kurtis",
+    "subcategory": "Festive Wear",
+    "price": 1600,
+    "originalPrice": 1900,
+    "description": "Discover the luxury of this handcrafted kurti. Handcrafted with premium Chanderi in a stunning Royal Blue hue. Perfect for your most cherished occasions.",
+    "fabric": "Chanderi",
+    "images": [
+      "/images/kurti_party_1778910403804.png",
+      "/images/kurti_party_1778910403804.png"
+    ],
+    "colors": [
+      "Royal Blue",
+      "Blush Pink"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.7,
+    "reviews": 191,
+    "tags": [
+      "casual",
+      "festive",
+      "traditional"
+    ]
+  },
+  {
+    "id": "ku7",
+    "slug": "royal-ruby-red-straight-cut",
+    "name": "Royal Ruby Red Straight Cut",
+    "category": "Kurtis",
+    "subcategory": "Straight Cut",
+    "price": 3300,
+    "originalPrice": 4000,
+    "description": "Discover the luxury of this royal kurti. Handcrafted with premium Premium Cotton in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
+    "fabric": "Premium Cotton",
+    "images": [
+      "/images/kurti_party_1778910403804.png",
+      "/images/kurti_party_1778910403804.png"
+    ],
+    "colors": [
+      "Ruby Red",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.4,
+    "reviews": 58,
+    "tags": [
+      "traditional"
+    ]
+  },
+  {
+    "id": "ku8",
+    "slug": "handcrafted-emerald-green-straight-cut",
+    "name": "Handcrafted Emerald Green Straight Cut",
+    "category": "Kurtis",
+    "subcategory": "Straight Cut",
+    "price": 2600,
+    "originalPrice": 3100,
+    "description": "Discover the luxury of this handcrafted kurti. Handcrafted with premium Rayon in a stunning Emerald Green hue. Perfect for your most cherished occasions.",
+    "fabric": "Rayon",
+    "images": [
+      "/images/kurti_party_1778910403804.png",
+      "/images/kurti_party_1778910403804.png"
+    ],
+    "colors": [
+      "Emerald Green",
+      "Ruby Red"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.1,
+    "reviews": 46,
+    "tags": [
+      "casual",
+      "traditional"
+    ]
+  },
+  {
+    "id": "ku9",
+    "slug": "vibrant-rosy-taupe-anarkali",
+    "name": "Vibrant Rosy Taupe Anarkali",
+    "category": "Kurtis",
+    "subcategory": "Anarkali",
+    "price": 1600,
+    "originalPrice": 1900,
+    "description": "Discover the luxury of this vibrant kurti. Handcrafted with premium Cotton Silk in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
+    "fabric": "Cotton Silk",
+    "images": [
+      "/images/kurti_image_1778907149733.png",
+      "/images/kurti_image_1778907149733.png"
+    ],
+    "colors": [
+      "Rosy Taupe",
+      "Blush Pink"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.5,
+    "reviews": 39,
+    "tags": [
+      "casual",
+      "festive",
+      "premium"
+    ]
+  },
+  {
+    "id": "ku10",
+    "slug": "royal-ruby-red-straight-cut",
+    "name": "Royal Ruby Red Straight Cut",
+    "category": "Kurtis",
+    "subcategory": "Straight Cut",
+    "price": 2800,
+    "originalPrice": 3400,
+    "description": "Discover the luxury of this royal kurti. Handcrafted with premium Rayon in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
+    "fabric": "Rayon",
+    "images": [
+      "/images/kurti_party_1778910403804.png",
+      "/images/kurti_party_1778910403804.png"
+    ],
+    "colors": [
+      "Ruby Red",
+      "Ivory"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.2,
+    "reviews": 171,
+    "tags": [
+      "new arrival",
+      "bestseller",
+      "trending"
+    ]
+  }
+]

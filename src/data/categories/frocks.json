@@ -1,0 +1,340 @@
+[
+  {
+    "id": "fr1",
+    "slug": "handcrafted-grape-soda-casual",
+    "name": "Handcrafted Grape Soda Casual",
+    "category": "Frocks",
+    "subcategory": "Casual",
+    "price": 2700,
+    "originalPrice": 3200,
+    "description": "Discover the luxury of this handcrafted frock. Handcrafted with premium Organza in a stunning Grape Soda hue. Perfect for your most cherished occasions.",
+    "fabric": "Organza",
+    "images": [
+      "/images/frock_kids_1778910438508.png",
+      "/images/frock_kids_1778910438508.png"
+    ],
+    "colors": [
+      "Grape Soda",
+      "Blush Pink"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.6,
+    "reviews": 71,
+    "tags": [
+      "traditional",
+      "trending"
+    ]
+  },
+  {
+    "id": "fr2",
+    "slug": "luxurious-ivory-kids-collection",
+    "name": "Luxurious Ivory Kids Collection",
+    "category": "Frocks",
+    "subcategory": "Kids Collection",
+    "price": 2500,
+    "originalPrice": 3000,
+    "description": "Discover the luxury of this luxurious frock. Handcrafted with premium Organza in a stunning Ivory hue. Perfect for your most cherished occasions.",
+    "fabric": "Organza",
+    "images": [
+      "/images/frock_kids_1778910438508.png",
+      "/images/frock_kids_1778910438508.png"
+    ],
+    "colors": [
+      "Ivory",
+      "Mint Green"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.4,
+    "reviews": 92,
+    "tags": [
+      "bestseller"
+    ]
+  },
+  {
+    "id": "fr3",
+    "slug": "modern-ivory-casual",
+    "name": "Modern Ivory Casual",
+    "category": "Frocks",
+    "subcategory": "Casual",
+    "price": 1200,
+    "originalPrice": 1400,
+    "description": "Discover the luxury of this modern frock. Handcrafted with premium Net in a stunning Ivory hue. Perfect for your most cherished occasions.",
+    "fabric": "Net",
+    "images": [
+      "/images/frock_kids_1778910438508.png",
+      "/images/frock_kids_1778910438508.png"
+    ],
+    "colors": [
+      "Ivory",
+      "Gold"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.5,
+    "reviews": 54,
+    "tags": [
+      "bestseller"
+    ]
+  },
+  {
+    "id": "fr4",
+    "slug": "royal-grape-soda-kids-collection",
+    "name": "Royal Grape Soda Kids Collection",
+    "category": "Frocks",
+    "subcategory": "Kids Collection",
+    "price": 2900,
+    "originalPrice": 3500,
+    "description": "Discover the luxury of this royal frock. Handcrafted with premium Silk Blend in a stunning Grape Soda hue. Perfect for your most cherished occasions.",
+    "fabric": "Silk Blend",
+    "images": [
+      "/images/dress_image_1778907200388.png",
+      "/images/dress_image_1778907200388.png"
+    ],
+    "colors": [
+      "Grape Soda",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.5,
+    "reviews": 108,
+    "tags": [
+      "premium",
+      "festive"
+    ]
+  },
+  {
+    "id": "fr5",
+    "slug": "modern-blush-pink-party-wear",
+    "name": "Modern Blush Pink Party Wear",
+    "category": "Frocks",
+    "subcategory": "Party Wear",
+    "price": 1800,
+    "originalPrice": 2200,
+    "description": "Discover the luxury of this modern frock. Handcrafted with premium Silk Blend in a stunning Blush Pink hue. Perfect for your most cherished occasions.",
+    "fabric": "Silk Blend",
+    "images": [
+      "/images/dress_image_1778907200388.png",
+      "/images/dress_image_1778907200388.png"
+    ],
+    "colors": [
+      "Blush Pink",
+      "Mint Green"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "Low Stock",
+    "rating": 4.7,
+    "reviews": 138,
+    "tags": [
+      "traditional",
+      "new arrival",
+      "premium"
+    ]
+  },
+  {
+    "id": "fr6",
+    "slug": "luxurious-emerald-green-kids-collection",
+    "name": "Luxurious Emerald Green Kids Collection",
+    "category": "Frocks",
+    "subcategory": "Kids Collection",
+    "price": 2100,
+    "originalPrice": 2500,
+    "description": "Discover the luxury of this luxurious frock. Handcrafted with premium 100% Cotton in a stunning Emerald Green hue. Perfect for your most cherished occasions.",
+    "fabric": "100% Cotton",
+    "images": [
+      "/images/frock_kids_1778910438508.png",
+      "/images/frock_kids_1778910438508.png"
+    ],
+    "colors": [
+      "Emerald Green",
+      "Grape Soda"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.2,
+    "reviews": 116,
+    "tags": [
+      "premium",
+      "casual"
+    ]
+  },
+  {
+    "id": "fr7",
+    "slug": "royal-royal-blue-party-wear",
+    "name": "Royal Royal Blue Party Wear",
+    "category": "Frocks",
+    "subcategory": "Party Wear",
+    "price": 2700,
+    "originalPrice": 3200,
+    "description": "Discover the luxury of this royal frock. Handcrafted with premium 100% Cotton in a stunning Royal Blue hue. Perfect for your most cherished occasions.",
+    "fabric": "100% Cotton",
+    "images": [
+      "/images/frock_kids_1778910438508.png",
+      "/images/frock_kids_1778910438508.png"
+    ],
+    "colors": [
+      "Royal Blue",
+      "Blush Pink"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.2,
+    "reviews": 138,
+    "tags": [
+      "traditional"
+    ]
+  },
+  {
+    "id": "fr8",
+    "slug": "modern-lavender-casual",
+    "name": "Modern Lavender Casual",
+    "category": "Frocks",
+    "subcategory": "Casual",
+    "price": 2600,
+    "originalPrice": 3100,
+    "description": "Discover the luxury of this modern frock. Handcrafted with premium Organza in a stunning Lavender hue. Perfect for your most cherished occasions.",
+    "fabric": "Organza",
+    "images": [
+      "/images/dress_image_1778907200388.png",
+      "/images/dress_image_1778907200388.png"
+    ],
+    "colors": [
+      "Lavender",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.9,
+    "reviews": 31,
+    "tags": [
+      "bestseller",
+      "festive"
+    ]
+  },
+  {
+    "id": "fr9",
+    "slug": "royal-ivory-kids-collection",
+    "name": "Royal Ivory Kids Collection",
+    "category": "Frocks",
+    "subcategory": "Kids Collection",
+    "price": 1500,
+    "originalPrice": 1800,
+    "description": "Discover the luxury of this royal frock. Handcrafted with premium 100% Cotton in a stunning Ivory hue. Perfect for your most cherished occasions.",
+    "fabric": "100% Cotton",
+    "images": [
+      "/images/frock_kids_1778910438508.png",
+      "/images/frock_kids_1778910438508.png"
+    ],
+    "colors": [
+      "Ivory",
+      "Royal Blue"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 5,
+    "reviews": 90,
+    "tags": [
+      "casual",
+      "premium"
+    ]
+  },
+  {
+    "id": "fr10",
+    "slug": "elegant-ruby-red-party-wear",
+    "name": "Elegant Ruby Red Party Wear",
+    "category": "Frocks",
+    "subcategory": "Party Wear",
+    "price": 1900,
+    "originalPrice": 2300,
+    "description": "Discover the luxury of this elegant frock. Handcrafted with premium 100% Cotton in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
+    "fabric": "100% Cotton",
+    "images": [
+      "/images/dress_image_1778907200388.png",
+      "/images/dress_image_1778907200388.png"
+    ],
+    "colors": [
+      "Ruby Red",
+      "Royal Blue"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.3,
+    "reviews": 162,
+    "tags": [
+      "new arrival",
+      "trending"
+    ]
+  }
+]

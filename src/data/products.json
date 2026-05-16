@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Kanjivaram Silk Saree",
+    "category": "Sarees",
+    "price": 15000,
+    "image": "/images/saree_image_1778907133649.png",
+    "description": "Premium pure silk Kanjivaram saree with traditional zari work."
+  },
+  {
+    "id": "2",
+    "name": "Floral Anarkali Kurti",
+    "category": "Kurtis",
+    "price": 3500,
+    "image": "/images/kurti_image_1778907149733.png",
+    "description": "Elegant floral printed Anarkali kurti perfect for festive wear."
+  },
+  {
+    "id": "3",
+    "name": "Banarasi Brocade Saree",
+    "category": "Sarees",
+    "price": 12500,
+    "image": "/images/saree_image_1778907133649.png",
+    "description": "Rich Banarasi brocade saree in deep ruby with gold accents."
+  },
+  {
+    "id": "4",
+    "name": "Embroidered Party Dress",
+    "category": "Dresses",
+    "price": 8500,
+    "image": "/images/dress_image_1778907200388.png",
+    "description": "Modern ethnic party dress with intricate hand embroidery."
+  },
+  {
+    "id": "5",
+    "name": "Bridal Zardosi Blouse",
+    "category": "Blouses",
+    "price": 5500,
+    "image": "/images/bridal_image_1778907169512.png",
+    "description": "Custom fit bridal blouse with heavy zardosi work."
+  },
+  {
+    "id": "6",
+    "name": "Cotton Block Print Frock",
+    "category": "Frocks",
+    "price": 2800,
+    "image": "/images/dress_image_1778907200388.png",
+    "description": "Comfortable and stylish cotton block print frock for casual outings."
+  }
+]

@@ -1,0 +1,292 @@
+[
+  {
+    "id": "sa1",
+    "slug": "classic-mint-green-banarasi",
+    "name": "Classic Mint Green Banarasi",
+    "category": "Sarees",
+    "subcategory": "Banarasi",
+    "price": 8100,
+    "originalPrice": 9700,
+    "description": "Discover the luxury of this classic saree. Handcrafted with premium Cotton Silk in a stunning Mint Green hue. Perfect for your most cherished occasions.",
+    "fabric": "Cotton Silk",
+    "images": [
+      "/images/saree_cotton_1778910386572.png",
+      "/images/saree_cotton_1778910386572.png"
+    ],
+    "colors": [
+      "Mint Green",
+      "Royal Blue"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.9,
+    "reviews": 60,
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "id": "sa2",
+    "slug": "royal-lavender-designer-sarees",
+    "name": "Royal Lavender Designer Sarees",
+    "category": "Sarees",
+    "subcategory": "Designer Sarees",
+    "price": 6600,
+    "originalPrice": 7900,
+    "description": "Discover the luxury of this royal saree. Handcrafted with premium Banarasi Silk in a stunning Lavender hue. Perfect for your most cherished occasions.",
+    "fabric": "Banarasi Silk",
+    "images": [
+      "/images/saree_designer_1778909374137.png",
+      "/images/saree_designer_1778909374137.png"
+    ],
+    "colors": [
+      "Lavender",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.9,
+    "reviews": 125,
+    "tags": [
+      "festive",
+      "trending",
+      "premium"
+    ]
+  },
+  {
+    "id": "sa3",
+    "slug": "modern-ruby-red-designer-sarees",
+    "name": "Modern Ruby Red Designer Sarees",
+    "category": "Sarees",
+    "subcategory": "Designer Sarees",
+    "price": 10500,
+    "originalPrice": 12600,
+    "description": "Discover the luxury of this modern saree. Handcrafted with premium Banarasi Silk in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
+    "fabric": "Banarasi Silk",
+    "images": [
+      "/images/saree_image_1778907133649.png",
+      "/images/saree_image_1778907133649.png"
+    ],
+    "colors": [
+      "Ruby Red",
+      "Ruby Red"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.2,
+    "reviews": 185,
+    "tags": [
+      "premium",
+      "trending"
+    ]
+  },
+  {
+    "id": "sa4",
+    "slug": "royal-ruby-red-designer-sarees",
+    "name": "Royal Ruby Red Designer Sarees",
+    "category": "Sarees",
+    "subcategory": "Designer Sarees",
+    "price": 10800,
+    "originalPrice": 13000,
+    "description": "Discover the luxury of this royal saree. Handcrafted with premium Organza in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
+    "fabric": "Organza",
+    "images": [
+      "/images/saree_cotton_1778910386572.png",
+      "/images/saree_cotton_1778910386572.png"
+    ],
+    "colors": [
+      "Ruby Red",
+      "Mint Green"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.9,
+    "reviews": 115,
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "id": "sa5",
+    "slug": "classic-mint-green-kanjivaram",
+    "name": "Classic Mint Green Kanjivaram",
+    "category": "Sarees",
+    "subcategory": "Kanjivaram",
+    "price": 12000,
+    "originalPrice": 14400,
+    "description": "Discover the luxury of this classic saree. Handcrafted with premium Pure Silk in a stunning Mint Green hue. Perfect for your most cherished occasions.",
+    "fabric": "Pure Silk",
+    "images": [
+      "/images/saree_designer_1778909374137.png",
+      "/images/saree_designer_1778909374137.png"
+    ],
+    "colors": [
+      "Mint Green",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.8,
+    "reviews": 104,
+    "tags": [
+      "casual"
+    ]
+  },
+  {
+    "id": "sa6",
+    "slug": "modern-lavender-kanjivaram",
+    "name": "Modern Lavender Kanjivaram",
+    "category": "Sarees",
+    "subcategory": "Kanjivaram",
+    "price": 11700,
+    "originalPrice": 14000,
+    "description": "Discover the luxury of this modern saree. Handcrafted with premium Banarasi Silk in a stunning Lavender hue. Perfect for your most cherished occasions.",
+    "fabric": "Banarasi Silk",
+    "images": [
+      "/images/saree_designer_1778909374137.png",
+      "/images/saree_designer_1778909374137.png"
+    ],
+    "colors": [
+      "Lavender",
+      "Royal Blue"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.3,
+    "reviews": 30,
+    "tags": [
+      "trending"
+    ]
+  },
+  {
+    "id": "sa7",
+    "slug": "handcrafted-lavender-party-wear",
+    "name": "Handcrafted Lavender Party Wear",
+    "category": "Sarees",
+    "subcategory": "Party Wear",
+    "price": 11500,
+    "originalPrice": 13800,
+    "description": "Discover the luxury of this handcrafted saree. Handcrafted with premium Cotton Silk in a stunning Lavender hue. Perfect for your most cherished occasions.",
+    "fabric": "Cotton Silk",
+    "images": [
+      "/images/saree_banarasi_1778909373510.png",
+      "/images/saree_banarasi_1778909373510.png"
+    ],
+    "colors": [
+      "Lavender",
+      "Ivory"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.7,
+    "reviews": 14,
+    "tags": [
+      "traditional",
+      "festive",
+      "casual"
+    ]
+  },
+  {
+    "id": "sa8",
+    "slug": "royal-mint-green-kanjivaram",
+    "name": "Royal Mint Green Kanjivaram",
+    "category": "Sarees",
+    "subcategory": "Kanjivaram",
+    "price": 11200,
+    "originalPrice": 13400,
+    "description": "Discover the luxury of this royal saree. Handcrafted with premium Organza in a stunning Mint Green hue. Perfect for your most cherished occasions.",
+    "fabric": "Organza",
+    "images": [
+      "/images/saree_cotton_1778910386572.png",
+      "/images/saree_cotton_1778910386572.png"
+    ],
+    "colors": [
+      "Mint Green",
+      "Ruby Red"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.4,
+    "reviews": 112,
+    "tags": [
+      "bestseller",
+      "traditional",
+      "premium"
+    ]
+  },
+  {
+    "id": "sa9",
+    "slug": "vibrant-emerald-green-cotton-silk",
+    "name": "Vibrant Emerald Green Cotton Silk",
+    "category": "Sarees",
+    "subcategory": "Cotton Silk",
+    "price": 7400,
+    "originalPrice": 8900,
+    "description": "Discover the luxury of this vibrant saree. Handcrafted with premium Banarasi Silk in a stunning Emerald Green hue. Perfect for your most cherished occasions.",
+    "fabric": "Banarasi Silk",
+    "images": [
+      "/images/saree_image_1778907133649.png",
+      "/images/saree_image_1778907133649.png"
+    ],
+    "colors": [
+      "Emerald Green",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.5,
+    "reviews": 182,
+    "tags": [
+      "bestseller",
+      "casual"
+    ]
+  },
+  {
+    "id": "sa10",
+    "slug": "classic-ivory-kanjivaram",
+    "name": "Classic Ivory Kanjivaram",
+    "category": "Sarees",
+    "subcategory": "Kanjivaram",
+    "price": 9700,
+    "originalPrice": 11600,
+    "description": "Discover the luxury of this classic saree. Handcrafted with premium Banarasi Silk in a stunning Ivory hue. Perfect for your most cherished occasions.",
+    "fabric": "Banarasi Silk",
+    "images": [
+      "/images/saree_designer_1778909374137.png",
+      "/images/saree_designer_1778909374137.png"
+    ],
+    "colors": [
+      "Ivory",
+      "Blush Pink"
+    ],
+    "sizes": [
+      "Free Size"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 5,
+    "reviews": 132,
+    "tags": [
+      "casual",
+      "traditional",
+      "premium"
+    ]
+  }
+]

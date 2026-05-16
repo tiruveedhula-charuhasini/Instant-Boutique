@@ -1,0 +1,290 @@
+[
+  {
+    "id": "br1",
+    "slug": "premium-ivory-reception-wear",
+    "name": "Premium Ivory Reception Wear",
+    "category": "Bridal",
+    "subcategory": "Reception Wear",
+    "price": 43500,
+    "originalPrice": 52200,
+    "description": "Discover the luxury of this premium brida. Handcrafted with premium Velvet in a stunning Ivory hue. Perfect for your most cherished occasions.",
+    "fabric": "Velvet",
+    "images": [
+      "/images/bridal_pastel_1778909455805.png",
+      "/images/bridal_pastel_1778909455805.png"
+    ],
+    "colors": [
+      "Ivory",
+      "Ivory"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.8,
+    "reviews": 138,
+    "tags": [
+      "bestseller"
+    ]
+  },
+  {
+    "id": "br2",
+    "slug": "elegant-ruby-red-lehenga",
+    "name": "Elegant Ruby Red Lehenga",
+    "category": "Bridal",
+    "subcategory": "Lehenga",
+    "price": 55400,
+    "originalPrice": 66500,
+    "description": "Discover the luxury of this elegant brida. Handcrafted with premium Heavy Net in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
+    "fabric": "Heavy Net",
+    "images": [
+      "/images/bridal_image_1778907169512.png",
+      "/images/bridal_image_1778907169512.png"
+    ],
+    "colors": [
+      "Ruby Red",
+      "Ruby Red"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.8,
+    "reviews": 73,
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "id": "br3",
+    "slug": "royal-royal-blue-bridal-gown",
+    "name": "Royal Royal Blue Bridal Gown",
+    "category": "Bridal",
+    "subcategory": "Bridal Gown",
+    "price": 58800,
+    "originalPrice": 70600,
+    "description": "Discover the luxury of this royal brida. Handcrafted with premium Raw Silk in a stunning Royal Blue hue. Perfect for your most cherished occasions.",
+    "fabric": "Raw Silk",
+    "images": [
+      "/images/bridal_pastel_1778909455805.png",
+      "/images/bridal_pastel_1778909455805.png"
+    ],
+    "colors": [
+      "Royal Blue",
+      "Emerald Green"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.8,
+    "reviews": 93,
+    "tags": [
+      "premium",
+      "traditional"
+    ]
+  },
+  {
+    "id": "br4",
+    "slug": "modern-gold-lehenga",
+    "name": "Modern Gold Lehenga",
+    "category": "Bridal",
+    "subcategory": "Lehenga",
+    "price": 56200,
+    "originalPrice": 67400,
+    "description": "Discover the luxury of this modern brida. Handcrafted with premium Heavy Net in a stunning Gold hue. Perfect for your most cherished occasions.",
+    "fabric": "Heavy Net",
+    "images": [
+      "/images/bridal_pastel_1778909455805.png",
+      "/images/bridal_pastel_1778909455805.png"
+    ],
+    "colors": [
+      "Gold",
+      "Grape Soda"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.8,
+    "reviews": 113,
+    "tags": [
+      "new arrival",
+      "festive",
+      "casual"
+    ]
+  },
+  {
+    "id": "br5",
+    "slug": "elegant-rosy-taupe-bridal-gown",
+    "name": "Elegant Rosy Taupe Bridal Gown",
+    "category": "Bridal",
+    "subcategory": "Bridal Gown",
+    "price": 57300,
+    "originalPrice": 68800,
+    "description": "Discover the luxury of this elegant brida. Handcrafted with premium Organza Silk in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
+    "fabric": "Organza Silk",
+    "images": [
+      "/images/bridal_pastel_1778909455805.png",
+      "/images/bridal_pastel_1778909455805.png"
+    ],
+    "colors": [
+      "Rosy Taupe",
+      "Emerald Green"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.7,
+    "reviews": 110,
+    "tags": [
+      "bestseller"
+    ]
+  },
+  {
+    "id": "br6",
+    "slug": "modern-emerald-green-bridal-gown",
+    "name": "Modern Emerald Green Bridal Gown",
+    "category": "Bridal",
+    "subcategory": "Bridal Gown",
+    "price": 48400,
+    "originalPrice": 58100,
+    "description": "Discover the luxury of this modern brida. Handcrafted with premium Organza Silk in a stunning Emerald Green hue. Perfect for your most cherished occasions.",
+    "fabric": "Organza Silk",
+    "images": [
+      "/images/bridal_image_1778907169512.png",
+      "/images/bridal_image_1778907169512.png"
+    ],
+    "colors": [
+      "Emerald Green",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.3,
+    "reviews": 16,
+    "tags": [
+      "bestseller"
+    ]
+  },
+  {
+    "id": "br7",
+    "slug": "luxurious-rosy-taupe-lehenga",
+    "name": "Luxurious Rosy Taupe Lehenga",
+    "category": "Bridal",
+    "subcategory": "Lehenga",
+    "price": 50300,
+    "originalPrice": 60400,
+    "description": "Discover the luxury of this luxurious brida. Handcrafted with premium Raw Silk in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
+    "fabric": "Raw Silk",
+    "images": [
+      "/images/bridal_image_1778907169512.png",
+      "/images/bridal_image_1778907169512.png"
+    ],
+    "colors": [
+      "Rosy Taupe",
+      "Grape Soda"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.3,
+    "reviews": 77,
+    "tags": [
+      "trending",
+      "casual",
+      "new arrival"
+    ]
+  },
+  {
+    "id": "br8",
+    "slug": "handcrafted-mint-green-reception-wear",
+    "name": "Handcrafted Mint Green Reception Wear",
+    "category": "Bridal",
+    "subcategory": "Reception Wear",
+    "price": 60100,
+    "originalPrice": 72100,
+    "description": "Discover the luxury of this handcrafted brida. Handcrafted with premium Raw Silk in a stunning Mint Green hue. Perfect for your most cherished occasions.",
+    "fabric": "Raw Silk",
+    "images": [
+      "/images/bridal_image_1778907169512.png",
+      "/images/bridal_image_1778907169512.png"
+    ],
+    "colors": [
+      "Mint Green",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4,
+    "reviews": 139,
+    "tags": [
+      "trending"
+    ]
+  },
+  {
+    "id": "br9",
+    "slug": "royal-grape-soda-reception-wear",
+    "name": "Royal Grape Soda Reception Wear",
+    "category": "Bridal",
+    "subcategory": "Reception Wear",
+    "price": 32900,
+    "originalPrice": 39500,
+    "description": "Discover the luxury of this royal brida. Handcrafted with premium Raw Silk in a stunning Grape Soda hue. Perfect for your most cherished occasions.",
+    "fabric": "Raw Silk",
+    "images": [
+      "/images/bridal_pastel_1778909455805.png",
+      "/images/bridal_pastel_1778909455805.png"
+    ],
+    "colors": [
+      "Grape Soda",
+      "Blush Pink"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.3,
+    "reviews": 177,
+    "tags": [
+      "festive",
+      "bestseller"
+    ]
+  },
+  {
+    "id": "br10",
+    "slug": "premium-ivory-bridal-gown",
+    "name": "Premium Ivory Bridal Gown",
+    "category": "Bridal",
+    "subcategory": "Bridal Gown",
+    "price": 36400,
+    "originalPrice": 43700,
+    "description": "Discover the luxury of this premium brida. Handcrafted with premium Velvet in a stunning Ivory hue. Perfect for your most cherished occasions.",
+    "fabric": "Velvet",
+    "images": [
+      "/images/bridal_pastel_1778909455805.png",
+      "/images/bridal_pastel_1778909455805.png"
+    ],
+    "colors": [
+      "Ivory",
+      "Rosy Taupe"
+    ],
+    "sizes": [
+      "Custom Fit"
+    ],
+    "stockStatus": "In Stock",
+    "rating": 4.6,
+    "reviews": 41,
+    "tags": [
+      "traditional",
+      "bestseller",
+      "casual"
+    ]
+  }
+]
