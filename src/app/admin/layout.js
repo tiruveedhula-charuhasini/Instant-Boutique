@@ -14,11 +14,11 @@ export const metadata = {
 export default function AdminLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen bg-[#F8F4FF] dark:bg-[#0d0015] text-[#1a0030] dark:text-white transition-colors duration-300">
+      <body className="min-h-screen bg-[#F8F4FF] text-[#1a0030]">
         <SessionProviderWrapper>
           <AdminShell>{children}</AdminShell>
         </SessionProviderWrapper>
-      </body> 
+      </body>
     </html>
   );
 }

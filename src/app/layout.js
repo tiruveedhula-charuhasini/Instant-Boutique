@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${inter.variable} ${playfair.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen flex flex-col bg-surface">
+      <body className="min-h-screen bg-[#F8F4FF] text-[#1a0030]">
         <StoreProvider>
           <ToastProvider>
             <ScrollProgress />

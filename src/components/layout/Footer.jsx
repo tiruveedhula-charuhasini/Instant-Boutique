@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
@@ -26,8 +27,11 @@ const SocialIcons = {
 };
 
 export default function Footer() {
+  const pathname = usePathname();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle"); // idle | success | error
+
+  if (pathname?.startsWith("/admin")) return null;
 
   const handleSubscribe = (e) => {
     e.preventDefault();

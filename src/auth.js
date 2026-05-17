@@ -12,15 +12,28 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       async authorize(credentials) {
         const { email, password } = credentials ?? {};
 
-        // Compare against env-defined admin credentials
+        // Admin 1
         if (
-          email === process.env.ADMIN_EMAIL &&
-          password === process.env.ADMIN_PASSWORD
+          email === process.env.ADMIN1_EMAIL &&
+          password === process.env.ADMIN1_PASSWORD
         ) {
           return {
             id: "1",
-            email: process.env.ADMIN_EMAIL,
-            name: process.env.ADMIN_NAME ?? "Admin",
+            email: process.env.ADMIN1_EMAIL,
+            name: process.env.ADMIN1_NAME,
+            role: "admin",
+          };
+        }
+
+        // Admin 2
+        if (
+          email === process.env.ADMIN2_EMAIL &&
+          password === process.env.ADMIN2_PASSWORD
+        ) {
+          return {
+            id: "2",
+            email: process.env.ADMIN2_EMAIL,
+            name: process.env.ADMIN2_NAME,
             role: "admin",
           };
         }

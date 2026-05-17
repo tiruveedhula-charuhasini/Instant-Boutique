@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "customer": "Thanmayee ommena",
+    "email": "thanmayee@gmail.com",
+    "phone": "9012345670",
+    "address": "tyuiuioop, Kavali - 524201",
+    "paymentMethod": "Cash on Delivery",
+    "items": 2,
+    "amount": 113800,
+    "date": "17 May 2026",
+    "products": [
+      {
+        "id": "br7",
+        "name": "Luxurious Rosy Taupe Lehenga",
+        "qty": 2,
+        "price": 50300
+      },
+      {
+        "id": "sa2",
+        "name": "Royal Lavender Designer Sarees",
+        "qty": 2,
+        "price": 6600
+      }
+    ],
+    "id": "ORD-1779019502787",
+    "status": "Shipped",
+    "createdAt": "2026-05-17T12:05:02.787Z",
+    "updatedAt": "2026-05-17T13:50:27.181Z"
+  }
+]

@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   ArrowLeft, Package, User, MapPin, CreditCard,
-  Truck, MessageCircle, Printer, Clock, CheckCircle2,
-  XCircle, Loader2, Check,
+  Truck, MessageCircle, Printer, Loader2, Check, ShoppingBag,
 } from "lucide-react";
+import { useAdminToast } from "@/components/admin/AdminToast";
 
 const STATUSES = ["Pending", "Confirmed", "Packed", "Shipped", "Delivered", "Cancelled"];
 
@@ -20,53 +20,85 @@ const STATUS_COLORS = {
   Cancelled: "bg-red-500",
 };
 
-// Mock order factory — replace with API call: useSWR(`/api/admin/orders/${orderId}`)
-function getMockOrder(orderId) {
-  return {
-    id: orderId,
-    customer: { name: "Priya Sharma", email: "priya@example.com", phone: "+91 9876543210" },
-    address: "12, Rose Garden Apartments, MG Road, Bengaluru – 560001",
-    items: [
-      { name: "Banarasi Silk Saree", quantity: 1, price: 8999, size: "Free Size", color: "Red" },
-      { name: "Matching Blouse",     quantity: 1, price: 1299, size: "M",         color: "Red" },
-    ],
-    subtotal: 10298,
-    discount: 500,
-    shipping: 0,
-    total: 9798,
-    paymentMethod: "UPI",
-    status: "Shipped",
-    date: "16 May 2026, 11:42 AM",
-    estimatedDelivery: "19 May 2026",
-    notes: "Please pack carefully.",
-  };
-}
-
 export default function OrderDetailClient({ orderId }) {
-  const order = getMockOrder(orderId);
-  const [currentStatus, setCurrentStatus] = useState(order.status);
-  const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState(false);
+  const toast = useAdminToast();
+  const [order, setOrder]             = useState(null);
+  const [loading, setLoading]         = useState(true);
+  const [currentStatus, setCurrentStatus] = useState("");
+  const [saving, setSaving]           = useState(false);
+  const [saved, setSaved]             = useState(false);
 
-  const activeStatuses = STATUSES.filter((s) => s !== "Cancelled");
-  const activeIdx = activeStatuses.indexOf(currentStatus);
+  useEffect(() => {
+    async function fetchOrder() {
+      try {
+        const res  = await fetch(`/api/admin/orders/${orderId}`);
+        const data = await res.json();
+        if (res.ok) {
+          setOrder(data.order);
+          setCurrentStatus(data.order.status || "Pending");
+        } else {
+          setOrder(null);
+        }
+      } catch {
+        setOrder(null);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchOrder();
+  }, [orderId]);
 
   const updateStatus = async () => {
     setSaving(true);
     try {
-      await fetch(`/api/admin/orders/${orderId}`, {
-        method: "PUT",
+      const res = await fetch(`/api/admin/orders/${orderId}`, {
+        method:  "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ status: currentStatus }),
+        body:    JSON.stringify({ status: currentStatus }),
       });
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2500);
-    } catch (err) {
-      console.error(err);
+      if (res.ok) {
+        const data = await res.json();
+        setOrder(data.order);
+        toast.success(`Order ${orderId} status updated to ${currentStatus}`);
+        setSaved(true);
+        setTimeout(() => setSaved(false), 2500);
+      } else {
+        toast.error("Failed to update order status.");
+      }
+    } catch {
+      toast.error("Network error.");
     } finally {
       setSaving(false);
     }
   };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-32">
+        <Loader2 className="w-8 h-8 animate-spin text-[#610F7F]" />
+      </div>
+    );
+  }
+
+  if (!order) {
+    return (
+      <div className="text-center py-32 text-[#9C528B]/50">
+        <ShoppingBag className="w-12 h-12 mx-auto mb-3 opacity-30" />
+        <p className="text-sm">Order not found.</p>
+        <Link href="/admin/orders" className="text-xs text-[#610F7F] underline mt-2 inline-block">
+          ← Back to Orders
+        </Link>
+      </div>
+    );
+  }
+
+  // Normalise products — checkout sends order.products array; mock sends order.items
+  const lineItems = order.products
+    ? order.products.map((p) => ({ name: p.name, quantity: p.qty, price: p.price, size: "—", color: "—" }))
+    : order.items || [];
+
+  const activeStatuses = STATUSES.filter((s) => s !== "Cancelled");
+  const activeIdx = activeStatuses.indexOf(currentStatus);
 
   return (
     <div className="space-y-6">
@@ -165,7 +197,7 @@ export default function OrderDetailClient({ orderId }) {
           </div>
 
           <div className="divide-y divide-[#E2C2C6]/10 dark:divide-white/5">
-            {order.items.map((item, i) => (
+            {lineItems.map((item, i) => (
               <div key={i} className="flex items-center gap-4 px-5 py-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#F5E6FF] to-[#E2C2C6] dark:from-[#610F7F]/20 dark:to-[#9C528B]/20 flex items-center justify-center flex-shrink-0">
                   <Package className="w-5 h-5 text-[#610F7F]/50" />
@@ -185,19 +217,32 @@ export default function OrderDetailClient({ orderId }) {
 
           {/* Totals */}
           <div className="px-5 py-4 bg-[#F8F4FF] dark:bg-white/5 space-y-2">
-            {[
-              { label: "Subtotal",  value: `₹${order.subtotal.toLocaleString("en-IN")}`, cls: "" },
-              { label: "Discount",  value: `−₹${order.discount}`,                        cls: "text-emerald-600 dark:text-emerald-400" },
-              { label: "Shipping",  value: "Free",                                        cls: "text-emerald-600" },
-            ].map(({ label, value, cls }) => (
-              <div key={label} className="flex justify-between text-sm text-[#9C528B]/60 dark:text-white/40">
-                <span>{label}</span>
-                <span className={cls}>{value}</span>
+            {order.subtotal != null ? (
+              <>
+                {[
+                  { label: "Subtotal", value: `₹${order.subtotal.toLocaleString("en-IN")}`, cls: "" },
+                  order.discount ? { label: "Discount", value: `−₹${order.discount}`, cls: "text-emerald-600" } : null,
+                  { label: "Shipping", value: "Free", cls: "text-emerald-600" },
+                ].filter(Boolean).map(({ label, value, cls }) => (
+                  <div key={label} className="flex justify-between text-sm text-[#9C528B]/60 dark:text-white/40">
+                    <span>{label}</span>
+                    <span className={cls}>{value}</span>
+                  </div>
+                ))}
+              </>
+            ) : (
+              <div className="flex justify-between text-sm text-[#9C528B]/60 dark:text-white/40">
+                <span>Items ({order.items} item{order.items !== 1 ? "s" : ""})</span>
+                <span>₹{(order.amount ?? 0).toLocaleString("en-IN")}</span>
               </div>
-            ))}
+            )}
+            <div className="flex justify-between text-sm text-[#9C528B]/60 dark:text-white/40">
+              <span>Shipping</span>
+              <span className="text-emerald-600">Free</span>
+            </div>
             <div className="flex justify-between text-base font-bold text-[#2F0147] dark:text-white border-t border-[#E2C2C6]/20 dark:border-white/10 pt-2 mt-2">
               <span>Total</span>
-              <span>₹{order.total.toLocaleString("en-IN")}</span>
+              <span>₹{(order.total ?? order.amount ?? 0).toLocaleString("en-IN")}</span>
             </div>
           </div>
         </div>
@@ -210,11 +255,11 @@ export default function OrderDetailClient({ orderId }) {
               <User className="w-4 h-4 text-[#9C528B]" />
               <h3 className="font-serif text-base font-bold text-[#2F0147] dark:text-white">Customer</h3>
             </div>
-            <p className="text-sm font-semibold text-[#2F0147] dark:text-white">{order.customer.name}</p>
-            <p className="text-xs text-[#9C528B]/60 dark:text-white/40 mt-1">{order.customer.email}</p>
-            <p className="text-xs text-[#9C528B]/60 dark:text-white/40">{order.customer.phone}</p>
+            <p className="text-sm font-semibold text-[#2F0147] dark:text-white">{order.customer?.name || order.customer}</p>
+            <p className="text-xs text-[#9C528B]/60 dark:text-white/40 mt-1">{order.customer?.email || order.email || "—"}</p>
+            <p className="text-xs text-[#9C528B]/60 dark:text-white/40">{order.customer?.phone || order.phone || "—"}</p>
             <a
-              href={`https://wa.me/${order.customer.phone.replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(order.customer.name)}, regarding your order ${orderId}`}
+              href={`https://wa.me/${(order.customer?.phone || order.phone || "").replace(/\D/g, "")}?text=Hi%20${encodeURIComponent(order.customer?.name || order.customer || "")}, regarding your order ${orderId}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 mt-3 text-xs text-green-600 bg-green-50 dark:bg-green-500/10 px-3 py-1.5 rounded-lg hover:bg-green-100 dark:hover:bg-green-500/20 transition-colors"

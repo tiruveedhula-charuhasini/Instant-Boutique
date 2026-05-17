@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
-import { getProductByIdAdmin } from "@/lib/adminData";
+import { getProductByIdAdmin, updateProductAdmin, deleteProductAdmin } from "@/lib/adminData";
 
 export async function GET(request, { params }) {
   const session = await auth();
@@ -19,8 +19,9 @@ export async function PUT(request, { params }) {
 
   const { id } = await params;
   const body = await request.json();
-  // TODO: mongoose: await Product.findByIdAndUpdate(id, body)
-  return NextResponse.json({ success: true, product: { id, ...body } });
+  const updated = updateProductAdmin(id, body);
+  if (!updated) return NextResponse.json({ error: "Product not found" }, { status: 404 });
+  return NextResponse.json({ success: true, product: updated });
 }
 
 export async function DELETE(request, { params }) {
@@ -28,6 +29,7 @@ export async function DELETE(request, { params }) {
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { id } = await params;
-  // TODO: mongoose: await Product.findByIdAndDelete(id)
+  const deleted = deleteProductAdmin(id);
+  if (!deleted) return NextResponse.json({ error: "Product not found" }, { status: 404 });
   return NextResponse.json({ success: true, id });
 }

@@ -12,9 +12,9 @@ const PARTICLES = [
   { top: "55%", left: "15%", delay: "0.4s" }, { top: "70%", left: "88%", delay: "2.1s" },
   { top: "85%", left: "35%", delay: "0.8s" }, { top: "18%", left: "45%", delay: "3.2s" },
   { top: "40%", left: "92%", delay: "1.6s" }, { top: "62%", left: "58%", delay: "0.2s" },
-  { top: "5%",  left: "78%", delay: "2.8s" }, { top: "92%", left: "10%", delay: "1.4s" },
+  { top: "5%", left: "78%", delay: "2.8s" }, { top: "92%", left: "10%", delay: "1.4s" },
   { top: "33%", left: "30%", delay: "3.6s" }, { top: "77%", left: "65%", delay: "0.6s" },
-  { top: "48%", left: "5%",  delay: "2.4s" }, { top: "15%", left: "55%", delay: "4.0s" },
+  { top: "48%", left: "5%", delay: "2.4s" }, { top: "15%", left: "55%", delay: "4.0s" },
   { top: "90%", left: "50%", delay: "1.0s" }, { top: "25%", left: "18%", delay: "3.0s" },
   { top: "60%", left: "80%", delay: "1.8s" }, { top: "38%", left: "42%", delay: "4.2s" },
   { top: "80%", left: "22%", delay: "0.3s" }, { top: "10%", left: "90%", delay: "2.6s" },
@@ -22,11 +22,11 @@ const PARTICLES = [
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [email, setEmail]       = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPw, setShowPw]     = useState(false);
-  const [loading, setLoading]   = useState(false);
-  const [error, setError]       = useState("");
+  const [showPw, setShowPw] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -119,7 +119,7 @@ export default function AdminLoginPage() {
                 Email Address
               </label>
               <div className="relative">
-                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 group-focus-within:text-[#D4AF37] transition-colors" />
+                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#D4AF37] transition-colors" />
                 <input
                   id="admin-email"
                   type="email"
@@ -139,7 +139,7 @@ export default function AdminLoginPage() {
                 Password
               </label>
               <div className="relative">
-                <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 group-focus-within:text-[#D4AF37] transition-colors" />
+                <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#D4AF37] transition-colors" />
                 <input
                   id="admin-password"
                   type={showPw ? "text" : "password"}
@@ -153,10 +153,10 @@ export default function AdminLoginPage() {
                 <button
                   type="button"
                   onClick={() => setShowPw(!showPw)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[#D4AF37] transition-colors"
                   aria-label={showPw ? "Hide password" : "Show password"}
                 >
-                  {showPw ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  {showPw ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
                 </button>
               </div>
             </div>

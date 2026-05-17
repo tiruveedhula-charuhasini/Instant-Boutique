@@ -6,7 +6,7 @@ import { signOut, useSession } from "next-auth/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import {
-  Menu, Search, Bell, Sun, Moon, ChevronDown,
+  Menu, Search, Bell, ChevronDown,
   LogOut, Settings, ExternalLink, X,
 } from "lucide-react";
 
@@ -27,7 +27,7 @@ function useDismissOnOutsideClick(ref, onClose) {
   }, [ref, onClose]);
 }
 
-export default function AdminTopbar({ setMobileOpen, darkMode, setDarkMode }) {
+export default function AdminTopbar({ setMobileOpen }) {
   const { data: session } = useSession();
   const pathname = usePathname();
 
@@ -63,7 +63,10 @@ export default function AdminTopbar({ setMobileOpen, darkMode, setDarkMode }) {
   const markAllRead = () =>
     setNotifications((n) => n.map((x) => ({ ...x, read: true })));
 
-  const handleSignOut = () => signOut({ callbackUrl: "/admin/login" });
+  const handleSignOut = async () => {
+    await signOut({ redirect: false });
+    window.location.href = "/admin/login";
+  };
 
   return (
     <header className="sticky top-0 z-20 h-16 flex items-center px-4 lg:px-6 gap-4 bg-white/90 dark:bg-[#1a0030]/90 backdrop-blur-xl border-b border-[#E2C2C6]/30 dark:border-white/10 shadow-sm">
@@ -136,14 +139,7 @@ export default function AdminTopbar({ setMobileOpen, darkMode, setDarkMode }) {
           </AnimatePresence>
         </div>
 
-        {/* Dark mode */}
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="p-2 rounded-xl hover:bg-[#F5E6F5] dark:hover:bg-white/10 transition-colors text-[#9C528B] dark:text-white/60"
-          aria-label="Toggle dark mode"
-        >
-          {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-        </button>
+
 
         {/* Notifications */}
         <div className="relative" ref={notifRef}>
