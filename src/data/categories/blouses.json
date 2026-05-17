@@ -10,7 +10,7 @@
     "description": "Discover the luxury of this elegant blouse. Handcrafted with premium Pure Silk in a stunning Royal Blue hue. Perfect for your most cherished occasions.",
     "fabric": "Pure Silk",
     "images": [
-      "/images/blouse_embroidered_1778910458302.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1778995074/blouses_dlvkws.jpg",
       "/images/blouse_embroidered_1778910458302.png"
     ],
     "colors": [
@@ -43,7 +43,7 @@
     "description": "Discover the luxury of this royal blouse. Handcrafted with premium Raw Silk in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
     "fabric": "Raw Silk",
     "images": [
-      "/images/blouse_embroidered_1778910458302.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779018648/a485b3fcedb489e1003dcebc9422c1f1_tswwch.jpg",
       "/images/blouse_embroidered_1778910458302.png"
     ],
     "colors": [
@@ -78,8 +78,8 @@
     "description": "Discover the luxury of this luxurious blouse. Handcrafted with premium Raw Silk in a stunning Gold hue. Perfect for your most cherished occasions.",
     "fabric": "Raw Silk",
     "images": [
-      "/images/blouse_embroidered_1778910458302.png",
-      "/images/blouse_embroidered_1778910458302.png"
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779018666/67fc20839974f0f4df1dda206809e566_mwspsl.jpg",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779018672/dc9f1e01fc4f3d5dd3344e6e970fb3ca_f8ropt.jpg"
     ],
     "colors": [
       "Gold",
@@ -111,8 +111,8 @@
     "description": "Discover the luxury of this vibrant blouse. Handcrafted with premium Velvet in a stunning Grape Soda hue. Perfect for your most cherished occasions.",
     "fabric": "Velvet",
     "images": [
-      "/images/blouse_embroidered_1778910458302.png",
-      "/images/blouse_embroidered_1778910458302.png"
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779018829/b1c4e1e53838da2625c588ee68400ce7_g52rrr.jpg",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779018835/025ccd3cedf7d33bfac960c2c4492eca_outedj.jpg"
     ],
     "colors": [
       "Grape Soda",
@@ -146,7 +146,7 @@
     "description": "Discover the luxury of this luxurious blouse. Handcrafted with premium Pure Silk in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
     "fabric": "Pure Silk",
     "images": [
-      "/images/blouse_embroidered_1778910458302.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779018936/e3e0df2e58c96e0ccfba249da2396a8a_njzke0.jpg",
       "/images/blouse_embroidered_1778910458302.png"
     ],
     "colors": [
@@ -181,7 +181,7 @@
     "description": "Discover the luxury of this premium blouse. Handcrafted with premium Brocade in a stunning Lavender hue. Perfect for your most cherished occasions.",
     "fabric": "Brocade",
     "images": [
-      "/images/blouse_embroidered_1778910458302.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779019003/9165baae584531653eebbde1ecedfc07_vvuna2.jpg",
       "/images/blouse_embroidered_1778910458302.png"
     ],
     "colors": [
@@ -214,7 +214,7 @@
     "description": "Discover the luxury of this luxurious blouse. Handcrafted with premium Pure Silk in a stunning Blush Pink hue. Perfect for your most cherished occasions.",
     "fabric": "Pure Silk",
     "images": [
-      "/images/blouse_embroidered_1778910458302.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779018942/663c319f666b38111f1540b6050af91f_l9r9y4.jpg",
       "/images/blouse_embroidered_1778910458302.png"
     ],
     "colors": [
@@ -247,7 +247,7 @@
     "description": "Discover the luxury of this classic blouse. Handcrafted with premium Velvet in a stunning Gold hue. Perfect for your most cherished occasions.",
     "fabric": "Velvet",
     "images": [
-      "/images/blouse_puff_1778909439615.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779019217/4361f03ef970276c658f831ed81b56f6_ttjddz.jpg",
       "/images/blouse_puff_1778909439615.png"
     ],
     "colors": [
@@ -281,7 +281,7 @@
     "description": "Discover the luxury of this vibrant blouse. Handcrafted with premium Raw Silk in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
     "fabric": "Raw Silk",
     "images": [
-      "/images/blouse_puff_1778909439615.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779019224/4ec24e17d56674c3355bb544488cdbe1_xogt0m.jpg",
       "/images/blouse_puff_1778909439615.png"
     ],
     "colors": [
@@ -316,7 +316,7 @@
     "description": "Discover the luxury of this elegant blouse. Handcrafted with premium Brocade in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
     "fabric": "Brocade",
     "images": [
-      "/images/blouse_puff_1778909439615.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779019296/00b639ec02689f5be20c6dd6c19d7aa5_hzuqva.jpg",
       "/images/blouse_puff_1778909439615.png"
     ],
     "colors": [

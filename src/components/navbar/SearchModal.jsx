@@ -6,15 +6,17 @@ import {
   X,
   Search as SearchIcon,
   Sparkles,
+  ArrowRight,
 } from "lucide-react";
-
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function SearchModal({
   isOpen,
   onClose,
 }) {
+  const router = useRouter();
   const [query, setQuery] = useState("");
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -52,6 +54,20 @@ export default function SearchModal({
       window.removeEventListener("keydown", handleKey);
     };
   }, [onClose]);
+
+  const handleSearchSubmit = (e) => {
+    if (e.key === "Enter" && query.trim()) {
+      onClose();
+      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+    }
+  };
+
+  const handleViewAllResults = () => {
+    if (query.trim()) {
+      onClose();
+      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+    }
+  };
 
   // Filter results
   const results = useMemo(() => {
@@ -105,7 +121,7 @@ export default function SearchModal({
           duration: 0.3,
           ease: [0.16, 1, 0.3, 1],
         }}
-        className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-white/20"
+        className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-white/20 flex flex-col max-h-[85vh]"
       >
 
         {/* Header */}
@@ -124,6 +140,7 @@ export default function SearchModal({
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={handleSearchSubmit}
               placeholder="Search sarees, silk, bridal collections..."
               className="flex-1 bg-transparent outline-none text-xl md:text-2xl text-[#2F0147] placeholder:text-gray-300"
               style={{
@@ -134,7 +151,7 @@ export default function SearchModal({
             {/* Close */}
             <button
               onClick={onClose}
-              className="w-12 h-12 rounded-full bg-[#F8F3F5] hover:bg-[#EAD7DC] flex items-center justify-center transition-all"
+              className="w-12 h-12 rounded-full bg-[#F8F3F5] hover:bg-[#EAD7DC] flex items-center justify-center transition-all flex-shrink-0"
             >
               <X size={20} />
             </button>
@@ -142,7 +159,7 @@ export default function SearchModal({
         </div>
 
         {/* Body */}
-        <div className="max-h-[75vh] overflow-y-auto px-6 md:px-10 py-8">
+        <div className="flex-1 overflow-y-auto px-6 md:px-10 py-8">
 
           {/* Trending Searches */}
           {!query && (
@@ -155,7 +172,11 @@ export default function SearchModal({
                 {trendingSearches.map((term) => (
                   <button
                     key={term}
-                    onClick={() => setQuery(term)}
+                    onClick={() => {
+                      setQuery(term);
+                      router.push(`/search?q=${encodeURIComponent(term)}`);
+                      onClose();
+                    }}
                     className="px-5 py-2.5 rounded-full bg-[#F8F3F5] hover:bg-[#610F7F] hover:text-white transition-all text-sm"
                   >
                     {term}
@@ -192,9 +213,12 @@ export default function SearchModal({
                   </h2>
                 </div>
 
-                <p className="text-sm text-gray-500">
-                  {results.length} Products
-                </p>
+                <button 
+                  onClick={handleViewAllResults}
+                  className="flex items-center gap-2 text-sm text-[#9C528B] hover:text-[#610F7F] font-semibold transition-colors"
+                >
+                  View All Results <ArrowRight size={16} />
+                </button>
               </div>
 
               {/* Empty */}
@@ -214,7 +238,7 @@ export default function SearchModal({
                   </p>
                 </div>
               ) : (
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pb-6">
                   {results.map((product) => (
                     <Link
                       key={product.id}
@@ -226,7 +250,7 @@ export default function SearchModal({
                       {/* Product Image */}
                       <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-[#F5EEF0] mb-4">
                         <Image
-                          src={product.images?.[0]}
+                          src={product.images?.[0] || product.image}
                           alt={product.name}
                           fill
                           unoptimized

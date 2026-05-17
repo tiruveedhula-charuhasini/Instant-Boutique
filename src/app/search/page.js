@@ -1,18 +1,44 @@
 "use client";
 
-import { useState, Suspense } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Filter, ChevronDown } from "lucide-react";
-import { useStore } from "@/context/StoreContext";
+import { Filter, ChevronDown, Search as SearchIcon } from "lucide-react";
 import { useProductFilters } from "@/hooks/useProductFilters";
 import FilterSidebar from "@/components/shared/FilterSidebar";
 import ProductCard from "@/components/ui/ProductCard";
+import SkeletonCard from "@/components/ui/SkeletonCard";
 
-function WishlistContent() {
-  const { wishlist, toggleWishlist } = useStore();
+function SearchResults() {
+  const searchParams = useSearchParams();
+  const query = searchParams.get("q") || "";
+  
+  const [allProducts, setAllProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch("/api/products")
+      .then(res => res.json())
+      .then(data => {
+        // Filter by search query first
+        let matches = data;
+        if (query) {
+          const q = query.toLowerCase();
+          matches = data.filter(product => 
+            product.name?.toLowerCase().includes(q) ||
+            product.category?.toLowerCase().includes(q) ||
+            product.subcategory?.toLowerCase().includes(q) ||
+            product.fabric?.toLowerCase().includes(q) ||
+            product.colors?.some(color => color.toLowerCase().includes(q)) ||
+            product.tags?.some(tag => tag.toLowerCase().includes(q))
+          );
+        }
+        setAllProducts(matches);
+      })
+      .finally(() => setLoading(false));
+  }, [query]);
 
   const {
     selectedSubcategories,
@@ -24,7 +50,7 @@ function WishlistContent() {
     handlePriceChange,
     handleSortChange,
     clearAllFilters
-  } = useProductFilters(wishlist);
+  } = useProductFilters(allProducts);
 
   return (
     <div className="min-h-screen bg-white px-6 md:px-12 py-28">
@@ -33,30 +59,36 @@ function WishlistContent() {
           className="text-4xl md:text-5xl font-bold text-[#2F0147]"
           style={{ fontFamily: "var(--font-playfair)" }}
         >
-          My Wishlist
+          Search Results
         </h1>
-
-        <p className="text-gray-500 mt-3">
-          Your saved boutique favorites.
+        <p className="text-gray-500 mt-3 text-lg">
+          {query ? (
+            <>Showing results for "<span className="font-semibold text-gray-900">{query}</span>"</>
+          ) : (
+            "All Products"
+          )}
         </p>
       </div>
 
-      {wishlist.length === 0 ? (
+      {loading ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[1, 2, 3, 4, 5, 6, 7, 8].map(i => <SkeletonCard key={i} />)}
+        </div>
+      ) : allProducts.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-24 border border-dashed border-gray-200 rounded-xl">
+          <SearchIcon size={48} className="text-gray-300 mb-4" />
           <h2 className="text-2xl font-semibold text-gray-700 mb-3">
-            Wishlist is Empty
+            No products found
           </h2>
-
           <p className="text-gray-500 mb-8 text-center max-w-md">
-            Save your favorite products to view them later.
+            We couldn't find anything matching "{query}". Try a different search term or browse our collections.
           </p>
-
-          <Link
+          <a
             href="/collections"
             className="bg-[#610F7F] text-white px-8 py-4 uppercase tracking-widest text-sm hover:bg-[#2F0147] transition-colors"
           >
             Explore Collections
-          </Link>
+          </a>
         </div>
       ) : (
         <div>
@@ -150,10 +182,10 @@ function WishlistContent() {
   );
 }
 
-export default function WishlistPage() {
+export default function SearchPage() {
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-10 h-10 border-2 border-[#9C528B]/20 border-t-[#610F7F] rounded-full animate-spin"></div></div>}>
-      <WishlistContent />
+      <SearchResults />
     </Suspense>
   );
 }

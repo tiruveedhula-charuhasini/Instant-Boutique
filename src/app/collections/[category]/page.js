@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { getProductsByCategory } from "@/lib/data";
 import ClientCategoryPage from "./ClientCategoryPage";
@@ -33,7 +34,9 @@ export default async function CategoryPage({ params }) {
         />
         
         {displayProducts.length > 0 ? (
-          <ClientCategoryPage initialProducts={displayProducts} categoryName={title} />
+          <Suspense fallback={<div className="flex justify-center py-20"><div className="w-10 h-10 border-2 border-[#9C528B]/20 border-t-[#610F7F] rounded-full animate-spin"></div></div>}>
+            <ClientCategoryPage initialProducts={displayProducts} categoryName={title} />
+          </Suspense>
         ) : (
           <div className="text-center py-24">
             <p className="text-gray-500 text-lg">New collection dropping soon. Stay tuned!</p>

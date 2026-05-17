@@ -1,21 +1,21 @@
 [
   {
     "id": "sa1",
-    "slug": "classic-mint-green-banarasi",
-    "name": "Classic Mint Green Banarasi",
+    "slug": "classic-royal-blue-banarasi",
+    "name": "Classic Royal Blue Banarasi",
     "category": "Sarees",
     "subcategory": "Banarasi",
     "price": 8100,
     "originalPrice": 9700,
-    "description": "Discover the luxury of this classic saree. Handcrafted with premium Cotton Silk in a stunning Mint Green hue. Perfect for your most cherished occasions.",
+    "description": "Discover the luxury of this classic saree. Handcrafted with premium Cotton Silk in a stunning Royal blue hue. Perfect for your most cherished occasions.",
     "fabric": "Cotton Silk",
     "images": [
-      "/images/saree_cotton_1778910386572.png",
-      "/images/saree_cotton_1778910386572.png"
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779010076/74c5a5b5c3af8334fe6b0e08925663aa_iwzfez.jpg",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779014355/99f75dfcef75b4804db7a136c34ebf90_ovgg5h.jpg"
     ],
     "colors": [
-      "Mint Green",
-      "Royal Blue"
+      "Royal Blue",
+      "Mint Green"
     ],
     "sizes": [
       "Free Size"
@@ -38,7 +38,7 @@
     "description": "Discover the luxury of this royal saree. Handcrafted with premium Banarasi Silk in a stunning Lavender hue. Perfect for your most cherished occasions.",
     "fabric": "Banarasi Silk",
     "images": [
-      "/images/saree_designer_1778909374137.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779014161/6ea92570f6b66e743d0375d1296a568e_a67iws.jpg",
       "/images/saree_designer_1778909374137.png"
     ],
     "colors": [
@@ -68,7 +68,7 @@
     "description": "Discover the luxury of this modern saree. Handcrafted with premium Banarasi Silk in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
     "fabric": "Banarasi Silk",
     "images": [
-      "/images/saree_image_1778907133649.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779014434/33fe8e57f3caa5dd6b9492acae98ef3b_dal39y.jpg",
       "/images/saree_image_1778907133649.png"
     ],
     "colors": [
@@ -97,7 +97,7 @@
     "description": "Discover the luxury of this royal saree. Handcrafted with premium Organza in a stunning Ruby Red hue. Perfect for your most cherished occasions.",
     "fabric": "Organza",
     "images": [
-      "/images/saree_cotton_1778910386572.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779015247/5ec506d4f826e4d0d095810bb9dcc1ff_q2pfjb.jpg",
       "/images/saree_cotton_1778910386572.png"
     ],
     "colors": [
@@ -125,7 +125,7 @@
     "description": "Discover the luxury of this classic saree. Handcrafted with premium Pure Silk in a stunning Mint Green hue. Perfect for your most cherished occasions.",
     "fabric": "Pure Silk",
     "images": [
-      "/images/saree_designer_1778909374137.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779015439/ff8569247d7064de9baf52633ee5fa94_l8yokh.jpg",
       "/images/saree_designer_1778909374137.png"
     ],
     "colors": [
@@ -153,7 +153,7 @@
     "description": "Discover the luxury of this modern saree. Handcrafted with premium Banarasi Silk in a stunning Lavender hue. Perfect for your most cherished occasions.",
     "fabric": "Banarasi Silk",
     "images": [
-      "/images/saree_designer_1778909374137.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779015523/8b78cb4e94c15fbf13f884e6cd1229de_elxi0k.jpg",
       "/images/saree_designer_1778909374137.png"
     ],
     "colors": [
@@ -181,7 +181,7 @@
     "description": "Discover the luxury of this handcrafted saree. Handcrafted with premium Cotton Silk in a stunning Lavender hue. Perfect for your most cherished occasions.",
     "fabric": "Cotton Silk",
     "images": [
-      "/images/saree_banarasi_1778909373510.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779015934/48f2c2e50289761add16f6474f416908_hgcdyd.jpg",
       "/images/saree_banarasi_1778909373510.png"
     ],
     "colors": [
@@ -202,13 +202,13 @@
   },
   {
     "id": "sa8",
-    "slug": "royal-mint-green-kanjivaram",
-    "name": "Royal Mint Green Kanjivaram",
+    "slug": "royal-lemon-yellow-kanjivaram",
+    "name": "Royal Lemon Yellow Kanjivaram",
     "category": "Sarees",
     "subcategory": "Kanjivaram",
     "price": 11200,
     "originalPrice": 13400,
-    "description": "Discover the luxury of this royal saree. Handcrafted with premium Organza in a stunning Mint Green hue. Perfect for your most cherished occasions.",
+    "description": "Discover the luxury of this royal saree. Handcrafted with premium Organza in a stunning Lemon Yellow hue. Perfect for your most cherished occasions.",
     "fabric": "Organza",
     "images": [
       "/images/saree_cotton_1778910386572.png",
@@ -241,7 +241,7 @@
     "description": "Discover the luxury of this vibrant saree. Handcrafted with premium Banarasi Silk in a stunning Emerald Green hue. Perfect for your most cherished occasions.",
     "fabric": "Banarasi Silk",
     "images": [
-      "/images/saree_image_1778907133649.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779014384/bca5736ac735ac8609caa54a9d064d5d_l9q1qp.jpg",
       "/images/saree_image_1778907133649.png"
     ],
     "colors": [
@@ -270,7 +270,7 @@
     "description": "Discover the luxury of this classic saree. Handcrafted with premium Banarasi Silk in a stunning Ivory hue. Perfect for your most cherished occasions.",
     "fabric": "Banarasi Silk",
     "images": [
-      "/images/saree_designer_1778909374137.png",
+      "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779014934/93515944e9670547719e40c8e39edd4d_fr7xll.jpg",
       "/images/saree_designer_1778909374137.png"
     ],
     "colors": [

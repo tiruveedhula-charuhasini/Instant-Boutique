@@ -1,79 +1,41 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProductCard from "@/components/ui/ProductCard";
 import SkeletonCard from "@/components/ui/SkeletonCard";
-import { Filter, X, ChevronDown } from "lucide-react";
+import { Filter, ChevronDown } from "lucide-react";
+import { useProductFilters } from "@/hooks/useProductFilters";
+import FilterSidebar from "@/components/shared/FilterSidebar";
 
 export default function ClientCategoryPage({ initialProducts, categoryName }) {
-  const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   
-  // Filter States
-  const [sortOption, setSortOption] = useState("featured");
-  const [selectedSubcategories, setSelectedSubcategories] = useState([]);
-  const [priceRange, setPriceRange] = useState(50000);
-
-  // Extract unique subcategories
-  const subcategories = useMemo(() => {
-    return [...new Set(initialProducts.map(p => p.subcategory))];
-  }, [initialProducts]);
+  const {
+    selectedSubcategories,
+    priceRange,
+    sortOption,
+    availableSubcategories,
+    filteredAndSortedProducts,
+    toggleSubcategory,
+    handlePriceChange,
+    handleSortChange,
+    clearAllFilters
+  } = useProductFilters(initialProducts);
 
   useEffect(() => {
     // Simulate network delay for premium feel
     const timer = setTimeout(() => {
-      setProducts(initialProducts);
       setIsLoading(false);
     }, 800);
     return () => clearTimeout(timer);
-  }, [initialProducts]);
-
-  const toggleSubcategory = (sub) => {
-    setSelectedSubcategories(prev => 
-      prev.includes(sub) ? prev.filter(s => s !== sub) : [...prev, sub]
-    );
-  };
-
-  const filteredAndSortedProducts = useMemo(() => {
-    let result = [...products];
-
-    // 1. Filter by subcategory
-    if (selectedSubcategories.length > 0) {
-      result = result.filter(p => selectedSubcategories.includes(p.subcategory));
-    }
-
-    // 2. Filter by price
-    result = result.filter(p => p.price <= priceRange);
-
-    // 3. Sort
-    switch (sortOption) {
-      case "price-asc":
-        result.sort((a, b) => a.price - b.price);
-        break;
-      case "price-desc":
-        result.sort((a, b) => b.price - a.price);
-        break;
-      case "newest":
-        result = result.filter(p => p.tags?.includes("new arrival"));
-        break;
-      case "trending":
-        result = result.filter(p => p.tags?.includes("trending"));
-        break;
-      default:
-        // featured: let's just show top rated first
-        result.sort((a, b) => b.rating - a.rating);
-        break;
-    }
-
-    return result;
-  }, [products, sortOption, selectedSubcategories, priceRange]);
+  }, []);
 
   return (
     <div>
       {/* Action Bar */}
-      {products.length > 0 && (
+      {initialProducts.length > 0 && (
         <div className="flex flex-col sm:flex-row justify-between items-center mb-10 py-4 border-b border-gray-200 gap-4">
           <div className="flex items-center gap-4">
             <span className="text-sm text-gray-500 uppercase tracking-widest">{filteredAndSortedProducts.length} Products</span>
@@ -82,7 +44,7 @@ export default function ClientCategoryPage({ initialProducts, categoryName }) {
             <div className="relative flex-1 sm:flex-none">
               <select 
                 value={sortOption}
-                onChange={(e) => setSortOption(e.target.value)}
+                onChange={(e) => handleSortChange(e.target.value)}
                 className="w-full sm:w-auto appearance-none bg-transparent border border-gray-300 text-sm text-gray-700 py-3 pl-4 pr-10 focus:outline-none focus:border-[#9C528B] transition-colors rounded-sm cursor-pointer"
               >
                 <option value="featured">Sort by Featured</option>
@@ -108,66 +70,15 @@ export default function ClientCategoryPage({ initialProducts, categoryName }) {
       )}
 
       <div className="flex flex-col lg:flex-row gap-10">
-        {/* Filter Sidebar */}
-        <AnimatePresence>
-          {isFilterOpen && (
-            <motion.div 
-              initial={{ width: 0, opacity: 0 }}
-              animate={{ width: 300, opacity: 1 }}
-              exit={{ width: 0, opacity: 0 }}
-              className="hidden lg:block overflow-hidden flex-shrink-0"
-            >
-              <div className="pr-8 border-r border-gray-100 min-h-[500px]">
-                <div className="mb-8">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4" style={{ fontFamily: "var(--font-serif)" }}>Category</h3>
-                  <div className="space-y-3">
-                    {subcategories.map(sub => (
-                      <label key={sub} className="flex items-center gap-3 cursor-pointer group">
-                        <div className={`w-5 h-5 border rounded-sm flex items-center justify-center transition-colors ${
-                          selectedSubcategories.includes(sub) ? "bg-[#9C528B] border-[#9C528B]" : "border-gray-300 group-hover:border-[#9C528B]"
-                        }`}>
-                          {selectedSubcategories.includes(sub) && <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-2.5 h-2.5 bg-white rounded-sm" />}
-                        </div>
-                        <span className="text-gray-600 text-sm">{sub}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mb-8">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-lg font-bold text-gray-900" style={{ fontFamily: "var(--font-serif)" }}>Max Price</h3>
-                    <span className="text-sm text-[#9C528B] font-medium">₹{priceRange.toLocaleString()}</span>
-                  </div>
-                  <input 
-                    type="range" 
-                    min="1000" 
-                    max="50000" 
-                    step="1000"
-                    value={priceRange}
-                    onChange={(e) => setPriceRange(Number(e.target.value))}
-                    className="w-full accent-[#9C528B]"
-                  />
-                  <div className="flex justify-between text-xs text-gray-400 mt-2">
-                    <span>₹1,000</span>
-                    <span>₹50,000</span>
-                  </div>
-                </div>
-
-                <button 
-                  onClick={() => {
-                    setSelectedSubcategories([]);
-                    setPriceRange(50000);
-                    setSortOption("featured");
-                  }}
-                  className="w-full py-3 border border-[#E2C2C6] text-[#9C528B] text-sm uppercase tracking-widest font-medium hover:bg-[#E2C2C6]/20 transition-colors"
-                >
-                  Clear All Filters
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <FilterSidebar 
+          isOpen={isFilterOpen}
+          availableSubcategories={availableSubcategories}
+          selectedSubcategories={selectedSubcategories}
+          toggleSubcategory={toggleSubcategory}
+          priceRange={priceRange}
+          handlePriceChange={handlePriceChange}
+          clearAllFilters={clearAllFilters}
+        />
 
         {/* Product Grid */}
         <div className="flex-1 transition-all duration-300">
@@ -204,7 +115,7 @@ export default function ClientCategoryPage({ initialProducts, categoryName }) {
               <h3 className="text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: "var(--font-serif)" }}>No results found</h3>
               <p className="text-gray-500 mb-6 text-lg">We couldn't find any products matching your selected filters.</p>
               <button 
-                onClick={() => { setSelectedSubcategories([]); setPriceRange(50000); setSortOption("featured"); }}
+                onClick={clearAllFilters}
                 className="bg-[#9C528B] text-white px-8 py-3 uppercase tracking-widest text-sm font-medium hover:bg-[#2F0147] transition-colors"
               >
                 Clear Filters

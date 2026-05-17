@@ -11,8 +11,8 @@ export default function CollectionsPage() {
     { title: "Sarees", image: "/images/saree_image_1778907133649.png", href: "/collections/sarees" },
     { title: "Kurtis", image: "/images/kurti_image_1778907149733.png", href: "/collections/kurtis" },
     { title: "Frocks", image: "/images/dress_image_1778907200388.png", href: "/collections/frocks" },
-    { title: "Dresses", image: "/images/dress_image_1778907200388.png", href: "/collections/dresses" },
-    { title: "Blouses", image: "/images/bridal_image_1778907169512.png", href: "/collections/blouses" },
+    { title: "Half Sarees", image: "https://res.cloudinary.com/df8a7nvyv/image/upload/v1779013154/0e032f95586604714887dbdf0a140344_wysy4u.jpg", href: "/collections/dresses" },
+    { title: "Blouses", image: "https://i.pinimg.com/736x/b8/2a/3d/b82a3d1b8567bfd1991986d9672f9f99.jpg", href: "/collections/blouses" },
     { title: "Bridal", image: "/images/bridal_image_1778907169512.png", href: "/collections/bridal" },
   ];
 
