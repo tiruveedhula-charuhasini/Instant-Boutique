@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
@@ -38,7 +38,7 @@ const schema = z.object({
   isTrending:       z.boolean().optional().default(false),
   isBestseller:     z.boolean().optional().default(false),
   isNewArrival:     z.boolean().optional().default(false),
-  thumbnail:        z.string().optional(),
+  thumbnail:        z.string().optional().default(""),
 });
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -147,6 +147,29 @@ export default function ProductFormClient({ mode = "add", product = null }) {
     watch,
   } = useForm({ resolver: zodResolver(schema), defaultValues });
 
+  // ─── Persistence ────────────────────────────────────────────────────────────
+  useEffect(() => {
+    if (mode === "add") {
+      try {
+        const draft = localStorage.getItem("boutique_product_draft");
+        if (draft) {
+          const parsed = JSON.parse(draft);
+          Object.keys(parsed).forEach(k => setValue(k, parsed[k]));
+        }
+      } catch {}
+    }
+  }, [mode, setValue]);
+
+  useEffect(() => {
+    if (mode === "add") {
+      const subscription = watch((value) => {
+        localStorage.setItem("boutique_product_draft", JSON.stringify(value));
+      });
+      return () => subscription.unsubscribe();
+    }
+  }, [watch, mode]);
+  // ────────────────────────────────────────────────────────────────────────────
+
   // Slug auto-generation
   const handleNameChange = useCallback(
     (e) => {
@@ -207,6 +230,9 @@ export default function ProductFormClient({ mode = "add", product = null }) {
             ? `"${data.name}" updated successfully!`
             : `"${data.name}" added successfully!`
         );
+        if (mode === "add") {
+          localStorage.removeItem("boutique_product_draft");
+        }
         setTimeout(() => {
           router.push("/admin/products");
           router.refresh();
@@ -231,8 +257,15 @@ export default function ProductFormClient({ mode = "add", product = null }) {
     { key: "isNewArrival",label: "New Arrival" },
   ];
 
+  const onError = (errors) => {
+    const firstError = Object.values(errors)[0];
+    if (firstError) {
+      toast.error(firstError.message);
+    }
+  };
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
+    <form onSubmit={handleSubmit(onSubmit, onError)} className="space-y-5" noValidate>
       {/* Status Badges */}
       <div className="flex flex-wrap gap-2">
         {flags.map(({ key, label }) => (

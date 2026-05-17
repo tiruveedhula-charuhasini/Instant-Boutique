@@ -9,6 +9,7 @@ export function StoreProvider({ children }) {
   const [recentlyViewed, setRecentlyViewed] = useState([]);
   const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [cart, setCart] = useState([]);
+  const [user, setUser] = useState(null);
 
   // ─── Hydrate from localStorage once ──────────────────────────────────────────
   useEffect(() => {
@@ -16,10 +17,12 @@ export function StoreProvider({ children }) {
       const savedWishlist       = localStorage.getItem("boutique_wishlist");
       const savedRecentlyViewed = localStorage.getItem("boutique_recently_viewed");
       const savedCart           = localStorage.getItem("boutique_cart");
+      const savedUser           = localStorage.getItem("boutique_user");
 
       if (savedWishlist)       setWishlist(JSON.parse(savedWishlist));
       if (savedRecentlyViewed) setRecentlyViewed(JSON.parse(savedRecentlyViewed));
       if (savedCart)           setCart(JSON.parse(savedCart));
+      if (savedUser)           setUser(JSON.parse(savedUser));
     } catch (e) {
       console.error("Failed to load local state", e);
     }
@@ -37,6 +40,18 @@ export function StoreProvider({ children }) {
   useEffect(() => {
     localStorage.setItem("boutique_cart", JSON.stringify(cart));
   }, [cart]);
+
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem("boutique_user", JSON.stringify(user));
+    } else {
+      localStorage.removeItem("boutique_user");
+    }
+  }, [user]);
+
+  // ─── User Auth (Customer) ───────────────────────────────────────────────────
+  const loginUser = useCallback((userData) => setUser(userData), []);
+  const logoutUser = useCallback(() => setUser(null), []);
 
   // ─── Wishlist ─────────────────────────────────────────────────────────────────
   const toggleWishlist = useCallback((product) => {
@@ -113,6 +128,10 @@ export function StoreProvider({ children }) {
   return (
     <StoreContext.Provider
       value={{
+        // User Auth
+        user,
+        loginUser,
+        logoutUser,
         // Wishlist
         wishlist,
         toggleWishlist,

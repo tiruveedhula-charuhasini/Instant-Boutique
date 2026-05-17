@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu, X, Search, Heart, ShoppingBag, ChevronDown } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { Menu, X, Search, Heart, ShoppingBag, ChevronDown, User, LogOut } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useStore } from "@/context/StoreContext";
 import SearchModal from "./SearchModal";
@@ -14,7 +14,10 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
-  const { wishlist, cartCount } = useStore();
+  const { wishlist, cartCount, user, logoutUser } = useStore();
+  const router = useRouter();
+
+  if (pathname?.startsWith("/admin")) return null;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -124,6 +127,30 @@ export default function Navbar() {
           >
             <Search size={20} />
           </button>
+
+          {/* User */}
+          {user ? (
+            <div className="flex items-center gap-2">
+              <span className={`text-xs font-medium ${isScrolled ? "text-gray-700" : "text-white/80"}`}>
+                {user.name?.split(" ")[0]}
+              </span>
+              <button
+                onClick={() => { logoutUser(); router.push("/"); }}
+                title="Sign Out"
+                className={`transition-colors hover:text-red-500 ${iconColor}`}
+              >
+                <LogOut size={17} />
+              </button>
+            </div>
+          ) : (
+            <Link
+              href="/login"
+              className={`transition-colors hover:text-[#9C528B] ${iconColor}`}
+              aria-label="Sign in"
+            >
+              <User size={20} />
+            </Link>
+          )}
 
           {/* Wishlist */}
           <Link

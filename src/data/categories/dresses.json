@@ -2,7 +2,7 @@
   {
     "id": "dr1",
     "slug": "elegant-lavender-maxi-dresses",
-    "name": "Elegant Lavender Maxi Dresses",
+    "name": "charrzzz",
     "category": "Dresses",
     "subcategory": "Maxi Dresses",
     "price": 4400,
@@ -32,7 +32,17 @@
       "festive",
       "premium",
       "traditional"
-    ]
+    ],
+    "shortDescription": "",
+    "sku": "",
+    "stockQuantity": 18,
+    "seoTitle": "",
+    "seoDescription": "",
+    "isFeatured": false,
+    "isTrending": false,
+    "isBestseller": false,
+    "isNewArrival": false,
+    "thumbnail": ""
   },
   {
     "id": "dr2",
@@ -64,279 +74,6 @@
     "rating": 4.1,
     "reviews": 20,
     "tags": [
-      "traditional"
-    ]
-  },
-  {
-    "id": "dr3",
-    "slug": "modern-emerald-green-maxi-dresses",
-    "name": "Modern Emerald Green Maxi Dresses",
-    "category": "Dresses",
-    "subcategory": "Maxi Dresses",
-    "price": 7900,
-    "originalPrice": 9500,
-    "description": "Discover the luxury of this modern dresse. Handcrafted with premium Georgette in a stunning Emerald Green hue. Perfect for your most cherished occasions.",
-    "fabric": "Georgette",
-    "images": [
-      "/images/dress_indo_western_1778909421111.png",
-      "/images/dress_indo_western_1778909421111.png"
-    ],
-    "colors": [
-      "Emerald Green",
-      "Mint Green"
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stockStatus": "In Stock",
-    "rating": 4.4,
-    "reviews": 122,
-    "tags": [
-      "festive"
-    ]
-  },
-  {
-    "id": "dr4",
-    "slug": "royal-lavender-maxi-dresses",
-    "name": "Royal Lavender Maxi Dresses",
-    "category": "Dresses",
-    "subcategory": "Maxi Dresses",
-    "price": 5300,
-    "originalPrice": 6400,
-    "description": "Discover the luxury of this royal dresse. Handcrafted with premium Crepe in a stunning Lavender hue. Perfect for your most cherished occasions.",
-    "fabric": "Crepe",
-    "images": [
-      "/images/dress_maxi_1778910421198.png",
-      "/images/dress_maxi_1778910421198.png"
-    ],
-    "colors": [
-      "Lavender",
-      "Royal Blue"
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stockStatus": "Low Stock",
-    "rating": 4.8,
-    "reviews": 29,
-    "tags": [
-      "trending",
-      "new arrival",
-      "casual"
-    ]
-  },
-  {
-    "id": "dr5",
-    "slug": "modern-rosy-taupe-maxi-dresses",
-    "name": "Modern Rosy Taupe Maxi Dresses",
-    "category": "Dresses",
-    "subcategory": "Maxi Dresses",
-    "price": 7300,
-    "originalPrice": 8800,
-    "description": "Discover the luxury of this modern dresse. Handcrafted with premium Silk Blend in a stunning Rosy Taupe hue. Perfect for your most cherished occasions.",
-    "fabric": "Silk Blend",
-    "images": [
-      "/images/dress_indo_western_1778909421111.png",
-      "/images/dress_indo_western_1778909421111.png"
-    ],
-    "colors": [
-      "Rosy Taupe",
-      "Rosy Taupe"
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stockStatus": "In Stock",
-    "rating": 4.5,
-    "reviews": 38,
-    "tags": [
-      "casual"
-    ]
-  },
-  {
-    "id": "dr6",
-    "slug": "classic-emerald-green-indo-western",
-    "name": "Classic Emerald Green Indo-Western",
-    "category": "Dresses",
-    "subcategory": "Indo-Western",
-    "price": 6300,
-    "originalPrice": 7600,
-    "description": "Discover the luxury of this classic dresse. Handcrafted with premium Georgette in a stunning Emerald Green hue. Perfect for your most cherished occasions.",
-    "fabric": "Georgette",
-    "images": [
-      "/images/dress_indo_western_1778909421111.png",
-      "/images/dress_indo_western_1778909421111.png"
-    ],
-    "colors": [
-      "Emerald Green",
-      "Rosy Taupe"
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stockStatus": "In Stock",
-    "rating": 4.7,
-    "reviews": 148,
-    "tags": [
-      "new arrival",
-      "premium",
-      "trending"
-    ]
-  },
-  {
-    "id": "dr7",
-    "slug": "classic-blush-pink-maxi-dresses",
-    "name": "Classic Blush Pink Maxi Dresses",
-    "category": "Dresses",
-    "subcategory": "Maxi Dresses",
-    "price": 6700,
-    "originalPrice": 8000,
-    "description": "Discover the luxury of this classic dresse. Handcrafted with premium Silk Blend in a stunning Blush Pink hue. Perfect for your most cherished occasions.",
-    "fabric": "Silk Blend",
-    "images": [
-      "/images/dress_maxi_1778910421198.png",
-      "/images/dress_maxi_1778910421198.png"
-    ],
-    "colors": [
-      "Blush Pink",
-      "Royal Blue"
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stockStatus": "In Stock",
-    "rating": 4.4,
-    "reviews": 199,
-    "tags": [
-      "trending"
-    ]
-  },
-  {
-    "id": "dr8",
-    "slug": "classic-ivory-party-dresses",
-    "name": "Classic Ivory Party Dresses",
-    "category": "Dresses",
-    "subcategory": "Party Dresses",
-    "price": 6800,
-    "originalPrice": 8200,
-    "description": "Discover the luxury of this classic dresse. Handcrafted with premium Silk Blend in a stunning Ivory hue. Perfect for your most cherished occasions.",
-    "fabric": "Silk Blend",
-    "images": [
-      "/images/dress_maxi_1778910421198.png",
-      "/images/dress_maxi_1778910421198.png"
-    ],
-    "colors": [
-      "Ivory",
-      "Rosy Taupe"
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stockStatus": "Low Stock",
-    "rating": 4.6,
-    "reviews": 84,
-    "tags": [
-      "casual",
-      "new arrival"
-    ]
-  },
-  {
-    "id": "dr9",
-    "slug": "vibrant-mint-green-indo-western",
-    "name": "Vibrant Mint Green Indo-Western",
-    "category": "Dresses",
-    "subcategory": "Indo-Western",
-    "price": 8000,
-    "originalPrice": 9600,
-    "description": "Discover the luxury of this vibrant dresse. Handcrafted with premium Georgette in a stunning Mint Green hue. Perfect for your most cherished occasions.",
-    "fabric": "Georgette",
-    "images": [
-      "/images/dress_indo_western_1778909421111.png",
-      "/images/dress_indo_western_1778909421111.png"
-    ],
-    "colors": [
-      "Mint Green",
-      "Royal Blue"
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stockStatus": "In Stock",
-    "rating": 4.4,
-    "reviews": 20,
-    "tags": [
-      "bestseller",
-      "traditional",
-      "casual"
-    ]
-  },
-  {
-    "id": "dr10",
-    "slug": "premium-mint-green-maxi-dresses",
-    "name": "Premium Mint Green Maxi Dresses",
-    "category": "Dresses",
-    "subcategory": "Maxi Dresses",
-    "price": 5800,
-    "originalPrice": 7000,
-    "description": "Discover the luxury of this premium dresse. Handcrafted with premium Georgette in a stunning Mint Green hue. Perfect for your most cherished occasions.",
-    "fabric": "Georgette",
-    "images": [
-      "/images/dress_indo_western_1778909421111.png",
-      "/images/dress_indo_western_1778909421111.png"
-    ],
-    "colors": [
-      "Mint Green",
-      "Mint Green"
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stockStatus": "Low Stock",
-    "rating": 4,
-    "reviews": 66,
-    "tags": [
-      "bestseller",
-      "casual",
       "traditional"
     ]
   }

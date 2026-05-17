@@ -1,4 +1,5 @@
 import OrdersClient from "@/components/admin/OrdersClient";
+import { getAllOrders } from "@/lib/adminData";
 
 export const metadata = { title: "Orders — Instant Boutique Admin" };
 
@@ -18,7 +19,7 @@ export default function OrdersPage() {
           Export CSV
         </button>
       </div>
-      <OrdersClient />
+      <OrdersClient orders={getAllOrders()} />
     </div>
   );
 }

@@ -44,6 +44,58 @@ export function getProductsByCategoryAdmin(category) {
   }
 }
 
+export function saveProductAdmin(product) {
+  const cat = product.category || "sarees";
+  const filePath = path.join(DATA_DIR, `${cat.toLowerCase()}.json`);
+  let products = [];
+  try {
+    if (fs.existsSync(filePath)) {
+      products = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    }
+  } catch {}
+  products.unshift(product);
+  fs.writeFileSync(filePath, JSON.stringify(products, null, 2));
+  return product;
+}
+
+export function updateProductAdmin(id, updates) {
+  try {
+    const files = fs.readdirSync(DATA_DIR);
+    for (const file of files) {
+      if (file.endsWith(".json")) {
+        const filePath = path.join(DATA_DIR, file);
+        let products = JSON.parse(fs.readFileSync(filePath, "utf8"));
+        const idx = products.findIndex((p) => String(p.id) === String(id));
+        if (idx !== -1) {
+          products[idx] = { ...products[idx], ...updates };
+          fs.writeFileSync(filePath, JSON.stringify(products, null, 2));
+          return products[idx];
+        }
+      }
+    }
+  } catch {}
+  return null;
+}
+
+export function deleteProductAdmin(id) {
+  try {
+    const files = fs.readdirSync(DATA_DIR);
+    for (const file of files) {
+      if (file.endsWith(".json")) {
+        const filePath = path.join(DATA_DIR, file);
+        let products = JSON.parse(fs.readFileSync(filePath, "utf8"));
+        const initialLength = products.length;
+        products = products.filter((p) => String(p.id) !== String(id));
+        if (products.length !== initialLength) {
+          fs.writeFileSync(filePath, JSON.stringify(products, null, 2));
+          return true;
+        }
+      }
+    }
+  } catch {}
+  return false;
+}
+
 // ─── Summary stats derived from JSON data ─────────────────────────────────────
 export function getAdminStats() {
   const products = getAllProductsAdmin();

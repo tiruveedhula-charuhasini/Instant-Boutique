@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
-import { getAllProductsAdmin } from "@/lib/adminData";
+import { getAllProductsAdmin, saveProductAdmin } from "@/lib/adminData";
 
 // GET — list all products
 export async function GET(request) {
@@ -31,9 +31,9 @@ export async function POST(request) {
 
   try {
     const body = await request.json();
-    // TODO: Replace with Mongoose: await dbConnect(); await Product.create(body);
-    // For now, return mock success
-    return NextResponse.json({ success: true, product: { ...body, id: Date.now() } }, { status: 201 });
+    const newProduct = { ...body, id: Date.now().toString() };
+    saveProductAdmin(newProduct);
+    return NextResponse.json({ success: true, product: newProduct }, { status: 201 });
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
