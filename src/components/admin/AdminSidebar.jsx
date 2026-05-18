@@ -15,7 +15,6 @@ const NAV_ITEMS = [
   { label: "Orders",    href: "/admin/orders",     icon: ShoppingBag, badge: "5", badgeColor: "bg-amber-500" },
   { label: "Customers", href: "/admin/customers",  icon: Users },
   { label: "Analytics", href: "/admin/analytics",  icon: BarChart3 },
-  { label: "Content",   href: "/admin/content",    icon: FileImage },
   { label: "Reviews",   href: "/admin/reviews",    icon: Star },
   { label: "Offers",    href: "/admin/offers",     icon: Tag },
   { label: "Settings",  href: "/admin/settings",   icon: Settings },

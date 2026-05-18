@@ -5,8 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
   Search, Filter, Eye, ChevronLeft, ChevronRight, ShoppingBag,
-  Clock, Package, Truck, CheckCircle2, XCircle, MessageCircle
+  Clock, Package, Truck, CheckCircle2, XCircle, MessageCircle, ChevronDown
 } from "lucide-react";
+import { useAdminToast } from "@/components/admin/AdminToast";
 
 const STATUS_CONFIG = {
   Pending:   { color: "bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-300", icon: Clock },
@@ -32,16 +33,36 @@ const STATUSES = ["All", "Pending", "Confirmed", "Packed", "Shipped", "Delivered
 const PER_PAGE = 10;
 
 export default function OrdersClient({ orders = MOCK_ORDERS }) {
+  const toast = useAdminToast();
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("All");
   const [page, setPage] = useState(1);
+  const [orderList, setOrderList] = useState(orders.length > 0 ? orders : MOCK_ORDERS);
+
+  const updateStatus = async (orderId, newStatus) => {
+    try {
+      const res = await fetch(`/api/admin/orders/${orderId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: newStatus }),
+      });
+      if (res.ok) {
+        toast.success(`Order ${orderId} updated to ${newStatus}`);
+        setOrderList(prev => prev.map(o => o.id === orderId ? { ...o, status: newStatus } : o));
+      } else {
+        toast.error("Failed to update status");
+      }
+    } catch {
+      toast.error("Network error");
+    }
+  };
 
   const filtered = useMemo(() => {
-    let o = [...orders];
+    let o = [...orderList];
     if (search) o = o.filter(x => x.id.includes(search) || x.customer.toLowerCase().includes(search.toLowerCase()));
     if (status !== "All") o = o.filter(x => x.status === status);
     return o;
-  }, [orders, search, status]);
+  }, [orderList, search, status]);
 
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
@@ -124,10 +145,19 @@ export default function OrdersClient({ orders = MOCK_ORDERS }) {
                       </span>
                     </td>
                     <td className="px-5 py-4">
-                      <span className={`inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full ${sc.color}`}>
-                        <Icon className="w-3 h-3" />
-                        {order.status}
-                      </span>
+                      <div className="relative inline-block">
+                        <select
+                          value={order.status}
+                          onChange={(e) => updateStatus(order.id, e.target.value)}
+                          className={`appearance-none text-[11px] font-semibold pl-8 pr-6 py-1 rounded-full outline-none cursor-pointer ${sc.color}`}
+                        >
+                          {STATUSES.filter(s => s !== "All").map(s => (
+                            <option key={s} value={s}>{s}</option>
+                          ))}
+                        </select>
+                        <Icon className="w-3 h-3 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                        <ChevronDown className="w-3 h-3 absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none opacity-60" />
+                      </div>
                     </td>
                     <td className="px-5 py-4">
                       <span className="text-sm text-[#9C528B]/60 dark:text-white/40">{order.date}</span>

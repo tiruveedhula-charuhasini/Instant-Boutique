@@ -52,6 +52,7 @@ export default function SettingsPage() {
     cardEnabled: false,
   });
 
+
   const [seo, setSeo] = useState({
     metaTitle: "Instant Boutique | Premium Ethnic Wear",
     metaDescription: "Traditional elegance mixed with modern minimalism. Premium handcrafted fashion brand.",
@@ -81,9 +82,8 @@ export default function SettingsPage() {
             const Icon = section.icon;
             return (
               <button key={section.id} onClick={() => setActiveSection(section.id)}
-                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all text-left ${
-                  activeSection === section.id ? "bg-[#610F7F] text-white shadow-md" : "text-[#9C528B] dark:text-white/60 hover:bg-[#F5E6FF] dark:hover:bg-white/10"
-                }`}>
+                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all text-left ${activeSection === section.id ? "bg-[#610F7F] text-white shadow-md" : "text-[#9C528B] dark:text-white/60 hover:bg-[#F5E6FF] dark:hover:bg-white/10"
+                  }`}>
                 <Icon className="w-4 h-4 flex-shrink-0" />
                 {section.label}
               </button>
@@ -108,36 +108,36 @@ export default function SettingsPage() {
                 </div>
               </div>
               <SettingField label="Boutique Name">
-                <input value={boutique.name} onChange={e => setBoutique(b => ({...b, name: e.target.value}))} className={inputCls} />
+                <input value={boutique.name} onChange={e => setBoutique(b => ({ ...b, name: e.target.value }))} className={inputCls} />
               </SettingField>
               <SettingField label="Tagline">
-                <input value={boutique.tagline} onChange={e => setBoutique(b => ({...b, tagline: e.target.value}))} className={inputCls} />
+                <input value={boutique.tagline} onChange={e => setBoutique(b => ({ ...b, tagline: e.target.value }))} className={inputCls} />
               </SettingField>
               <div className="grid grid-cols-2 gap-4">
                 <SettingField label="Contact Email">
-                  <input type="email" value={boutique.email} onChange={e => setBoutique(b => ({...b, email: e.target.value}))} className={inputCls} />
+                  <input type="email" value={boutique.email} onChange={e => setBoutique(b => ({ ...b, email: e.target.value }))} className={inputCls} />
                 </SettingField>
                 <SettingField label="Phone">
-                  <input value={boutique.phone} onChange={e => setBoutique(b => ({...b, phone: e.target.value}))} className={inputCls} />
+                  <input value={boutique.phone} onChange={e => setBoutique(b => ({ ...b, phone: e.target.value }))} className={inputCls} />
                 </SettingField>
               </div>
               <SettingField label="Address">
-                <textarea value={boutique.address} onChange={e => setBoutique(b => ({...b, address: e.target.value}))} rows={2} className={`${inputCls} resize-none`} />
+                <textarea value={boutique.address} onChange={e => setBoutique(b => ({ ...b, address: e.target.value }))} rows={2} className={`${inputCls} resize-none`} />
               </SettingField>
             </motion.div>
           )}
 
           {activeSection === "whatsapp" && (
-            <motion.div key="whatsapp" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
+            <motion.div key="whatsapp" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-7">
               <h3 className="font-serif text-lg font-bold text-[#2F0147] dark:text-white border-b border-[#E2C2C6]/20 dark:border-white/10 pb-3">WhatsApp & Contact</h3>
               <SettingField label="WhatsApp Number" hint="Include country code: +91 9876543210">
-                <input value={whatsapp.number} onChange={e => setWhatsapp(w => ({...w, number: e.target.value}))} className={inputCls} />
+                <input value={whatsapp.number} onChange={e => setWhatsapp(w => ({ ...w, number: e.target.value }))} className={inputCls} />
               </SettingField>
               <SettingField label="Default WhatsApp Message">
-                <textarea value={whatsapp.defaultMessage} onChange={e => setWhatsapp(w => ({...w, defaultMessage: e.target.value}))} rows={3} className={`${inputCls} resize-none`} />
+                <textarea value={whatsapp.defaultMessage} onChange={e => setWhatsapp(w => ({ ...w, defaultMessage: e.target.value }))} rows={3} className={`${inputCls} resize-none`} />
               </SettingField>
               <SettingField label="Business Hours">
-                <input value={whatsapp.businessHours} onChange={e => setWhatsapp(w => ({...w, businessHours: e.target.value}))} className={inputCls} />
+                <input value={whatsapp.businessHours} onChange={e => setWhatsapp(w => ({ ...w, businessHours: e.target.value }))} className={inputCls} />
               </SettingField>
             </motion.div>
           )}
@@ -146,10 +146,10 @@ export default function SettingsPage() {
             <motion.div key="payment" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
               <h3 className="font-serif text-lg font-bold text-[#2F0147] dark:text-white border-b border-[#E2C2C6]/20 dark:border-white/10 pb-3">Payment Settings</h3>
               <SettingField label="UPI ID">
-                <input value={payment.upiId} onChange={e => setPayment(p => ({...p, upiId: e.target.value}))} className={inputCls} />
+                <input value={payment.upiId} onChange={e => setPayment(p => ({ ...p, upiId: e.target.value }))} className={inputCls} />
               </SettingField>
               <SettingField label="Razorpay Key ID" hint="For online card payments">
-                <input value={payment.razorpayKey} onChange={e => setPayment(p => ({...p, razorpayKey: e.target.value}))} placeholder="rzp_live_..." className={inputCls} />
+                <input value={payment.razorpayKey} onChange={e => setPayment(p => ({ ...p, razorpayKey: e.target.value }))} placeholder="rzp_live_..." className={inputCls} />
               </SettingField>
               <div className="space-y-3">
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#9C528B]/60 dark:text-white/40">Payment Methods</p>
@@ -160,7 +160,7 @@ export default function SettingsPage() {
                 ].map(({ key, label }) => (
                   <div key={key} className="flex items-center justify-between p-3 bg-[#F8F4FF] dark:bg-white/5 rounded-xl">
                     <span className="text-sm text-[#2F0147] dark:text-white">{label}</span>
-                    <div onClick={() => setPayment(p => ({...p, [key]: !p[key]}))}
+                    <div onClick={() => setPayment(p => ({ ...p, [key]: !p[key] }))}
                       className={`w-11 h-6 rounded-full relative cursor-pointer transition-colors ${payment[key] ? "bg-[#610F7F]" : "bg-[#E2C2C6] dark:bg-white/20"}`}>
                       <div className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all ${payment[key] ? "left-6" : "left-1"}`} />
                     </div>
@@ -174,18 +174,18 @@ export default function SettingsPage() {
             <motion.div key="seo" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
               <h3 className="font-serif text-lg font-bold text-[#2F0147] dark:text-white border-b border-[#E2C2C6]/20 dark:border-white/10 pb-3">SEO Settings</h3>
               <SettingField label="Meta Title" hint="Shown in browser tab and search results (50–60 chars)">
-                <input value={seo.metaTitle} onChange={e => setSeo(s => ({...s, metaTitle: e.target.value}))} className={inputCls} />
+                <input value={seo.metaTitle} onChange={e => setSeo(s => ({ ...s, metaTitle: e.target.value }))} className={inputCls} />
                 <div className="text-[11px] text-right text-[#9C528B]/40 mt-0.5">{seo.metaTitle.length}/60</div>
               </SettingField>
               <SettingField label="Meta Description" hint="Shown in search results (150–160 chars)">
-                <textarea value={seo.metaDescription} onChange={e => setSeo(s => ({...s, metaDescription: e.target.value}))} rows={3} className={`${inputCls} resize-none`} />
+                <textarea value={seo.metaDescription} onChange={e => setSeo(s => ({ ...s, metaDescription: e.target.value }))} rows={3} className={`${inputCls} resize-none`} />
                 <div className="text-[11px] text-right text-[#9C528B]/40 mt-0.5">{seo.metaDescription.length}/160</div>
               </SettingField>
               <SettingField label="Keywords" hint="Comma-separated keywords">
-                <input value={seo.keywords} onChange={e => setSeo(s => ({...s, keywords: e.target.value}))} className={inputCls} />
+                <input value={seo.keywords} onChange={e => setSeo(s => ({ ...s, keywords: e.target.value }))} className={inputCls} />
               </SettingField>
               <SettingField label="Google Analytics ID" hint="e.g. G-XXXXXXXXXX">
-                <input value={seo.googleAnalytics} onChange={e => setSeo(s => ({...s, googleAnalytics: e.target.value}))} placeholder="G-XXXXXXXXXX" className={inputCls} />
+                <input value={seo.googleAnalytics} onChange={e => setSeo(s => ({ ...s, googleAnalytics: e.target.value }))} placeholder="G-XXXXXXXXXX" className={inputCls} />
               </SettingField>
             </motion.div>
           )}
@@ -196,7 +196,7 @@ export default function SettingsPage() {
               className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#2F0147] to-[#610F7F] text-white text-sm font-semibold shadow-lg">
               {saving ? <><Loader2 className="w-4 h-4 animate-spin" /> Saving...</>
                 : saved ? <><Check className="w-4 h-4" /> Saved!</>
-                : <><Save className="w-4 h-4" /> Save Changes</>}
+                  : <><Save className="w-4 h-4" /> Save Changes</>}
             </motion.button>
           </div>
         </div>

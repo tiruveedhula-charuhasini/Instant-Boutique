@@ -23,6 +23,7 @@ export default function ProductsClient({ products: initialProducts }) {
   const [selected, setSelected] = useState([]);
   const [deleteModal, setDeleteModal] = useState(null);
   const [deleting, setDeleting] = useState(false);
+  const [bulkDeleting, setBulkDeleting] = useState(false);
   const [sortBy, setSortBy] = useState("name");
 
 
@@ -31,7 +32,8 @@ export default function ProductsClient({ products: initialProducts }) {
     if (search) p = p.filter(pr => pr.name?.toLowerCase().includes(search.toLowerCase()) || pr.id?.toString().includes(search));
     if (category !== "All") p = p.filter(pr => (pr.category || pr._category || "").toLowerCase() === category.toLowerCase());
     p.sort((a, b) => {
-      if (sortBy === "price") return (b.price ?? 0) - (a.price ?? 0);
+      if (sortBy === "price-low") return (a.price ?? 0) - (b.price ?? 0);
+      if (sortBy === "price-high") return (b.price ?? 0) - (a.price ?? 0);
       if (sortBy === "stock") return (a.stockQuantity ?? 999) - (b.stockQuantity ?? 999);
       return (a.name ?? "").localeCompare(b.name ?? "");
     });
@@ -77,7 +79,8 @@ export default function ProductsClient({ products: initialProducts }) {
             className="px-3 py-2.5 bg-[#F8F4FF] dark:bg-white/5 border border-[#E2C2C6]/30 dark:border-white/10 rounded-xl text-sm text-[#2F0147] dark:text-white outline-none"
           >
             <option value="name">Sort: Name</option>
-            <option value="price">Sort: Price (High)</option>
+            <option value="price-low">Sort: Price (Low to High)</option>
+            <option value="price-high">Sort: Price (High to Low)</option>
             <option value="stock">Sort: Stock (Low)</option>
           </select>
         </div>
@@ -106,11 +109,30 @@ export default function ProductsClient({ products: initialProducts }) {
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center gap-3 p-3 bg-[#F5E6FF] dark:bg-[#610F7F]/20 rounded-xl border border-[#9C528B]/20"
           >
-            <span className="text-sm font-medium text-[#610F7F] dark:text-purple-300">
+            <span className="text-sm font-medium text-[#610F7F]">
               {selected.length} selected
             </span>
-            <button className="ml-auto text-xs text-red-600 hover:underline font-medium">
-              Delete Selected
+            <button 
+              onClick={async () => {
+                if (!window.confirm(`Are you sure you want to delete ${selected.length} products?`)) return;
+                setBulkDeleting(true);
+                let successCount = 0;
+                await Promise.all(selected.map(async (id) => {
+                  try {
+                    const res = await fetch(`/api/admin/products/${id}`, { method: "DELETE" });
+                    if (res.ok) successCount++;
+                  } catch (err) {}
+                }));
+                setProducts(p => p.filter(x => !selected.includes(x.id)));
+                setSelected([]);
+                setBulkDeleting(false);
+                toast.success(`Successfully deleted ${successCount} product(s).`);
+                router.refresh();
+              }}
+              disabled={bulkDeleting}
+              className="ml-auto text-xs text-red-600 hover:underline font-medium disabled:opacity-50"
+            >
+              {bulkDeleting ? "Deleting..." : "Delete Selected"}
             </button>
             <button
               onClick={() => setSelected([])}

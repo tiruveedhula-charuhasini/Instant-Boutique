@@ -5,11 +5,13 @@ import { useToast } from "@/context/ToastContext";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Trash2, Plus, Minus, ShoppingBag, ArrowLeft, MessageCircle } from "lucide-react";
+import { Trash2, Plus, Minus, ShoppingBag, ArrowLeft, MessageCircle, ShoppingCart } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function CartPage() {
-  const { cart, cartTotal, cartCount, increaseQuantity, decreaseQuantity, removeFromCart, clearCart } = useStore();
+  const { cart, cartTotal, cartCount, increaseQuantity, decreaseQuantity, removeFromCart, clearCart, user } = useStore();
   const { addToast } = useToast();
+  const router = useRouter();
 
   const handleRemove = (item) => {
     removeFromCart(item.id);
@@ -238,6 +240,20 @@ export default function CartPage() {
 
               {/* CTA Buttons */}
               <div className="space-y-3">
+                {/* Order Now - Primary CTA */}
+                <button
+                  onClick={() => {
+                    if (!user) {
+                      router.push("/login?redirect=/checkout");
+                    } else {
+                      router.push("/checkout");
+                    }
+                  }}
+                  className="w-full bg-gradient-to-r from-[#2F0147] to-[#610F7F] text-white py-4 flex items-center justify-center gap-2 uppercase tracking-widest text-sm font-semibold hover:opacity-90 transition-all shadow-lg rounded-sm"
+                >
+                  <ShoppingCart size={18} />
+                  {user ? "Order Now" : "Sign In to Order"}
+                </button>
                 <button
                   onClick={handleWhatsAppOrder}
                   className="w-full bg-[#25D366] text-white py-4 flex items-center justify-center gap-2 uppercase tracking-widest text-sm font-semibold hover:bg-[#22c35e] transition-colors shadow-lg"
